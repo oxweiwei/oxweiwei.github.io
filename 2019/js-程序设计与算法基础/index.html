@@ -428,10 +428,16 @@
 </ol>
 <h4 id="调用栈的运行机制"><a href="#调用栈的运行机制" class="headerlink" title="调用栈的运行机制"></a>调用栈的运行机制</h4><p><strong>机制</strong>：</p>
 <p>程序运行到一个函数，它就会将其添加到调用栈中，当从这个函数返回的时候，就会将这个函数从调用栈中删掉。</p>
+
+	    
+<!-- 下面为代码行的书写格式-->
 <p>看一下例子帮助理解：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调用栈中的执行步骤用数字表示</span></span><br><span class="line">printSquare(<span class="number">5</span>); <span class="comment">// 1 添加</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printSquare</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> s = multiply(x, x); <span class="comment">// 2 添加 =&gt; 3 运行完成，内部没有再调用其他函数，删掉</span></span><br><span class="line">    <span class="built_in">console</span>.log(s); <span class="comment">// 4 添加 =&gt; 5 删掉</span></span><br><span class="line">    <span class="comment">// 运行完成 删掉printSquare</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x * y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<!-- 下面为代码插入图片 -->
 <p>调用栈中的执行步骤如下(删除multiply的步骤被省略了)：</p>
 <p><img src="https://raw.githubusercontent.com/OBKoro1/articleImg_src/master/juejin/16acb4a439190d49?w=1024&amp;h=768&amp;f=png&amp;s=68010?raw=true" alt=""></p>
+
 <p><strong>调用侦</strong>：</p>
 <p>每个进入到调用栈中的函数，都会分配到一个单独的栈空间，称为“调用侦”。</p>
 <p>在调用栈中每个“调用侦”都对应一个函数，最上方的调用帧称为“当前帧”，调用栈是由所有的调用侦形成的。</p>
@@ -510,7 +516,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>听说，打赏我的人最后都找到了真爱。</div>
+  <div>据说，打赏我的人都脱单了。</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
@@ -518,14 +524,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/pay/weixin.jpg" alt="OBKoro1 微信支付"/>
+        <img id="wechat_qr" src="/imgs/payImg/IMG_5113.JPG" alt="oxweiwei 微信支付"/>
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/pay/ali.jpg" alt="OBKoro1 支付宝"/>
+        <img id="alipay_qr" src="imgs/payImg/IMG_5112.JPG" alt="oxweiwei 支付宝"/>
         <p>支付宝</p>
       </div>
     
