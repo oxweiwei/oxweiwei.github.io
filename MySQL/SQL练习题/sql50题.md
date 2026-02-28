@@ -1,3 +1,13 @@
+<style>
+    /* 隐藏GitHub默认的页眉/按钮 */
+    .header { display: none !important; }
+    .gh-header { display: none !important; }
+    .octotree-sidebar { display: none !important; }
+    /* 恢复页面默认边距 */
+    body { margin: 20px !important; }
+</style>
+
+# MySQL练习题 - SQL50题
 # 1，表结构说明
 
 数据表介绍
