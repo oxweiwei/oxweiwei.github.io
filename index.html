@@ -1,84 +1,113 @@
----
-layout: default
-title: 长风
----
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <title>我的个人博客</title>
+    <!-- 完全对齐 chegva.com 的样式 -->
     <style>
-        /* 极简样式，复刻纯文字博客 */
         body {
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            font-family: 微软雅黑, sans-serif;
+            font-family: "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
             line-height: 1.8;
             color: #333;
+            background: #fff;
         }
+        /* 标题：无加粗，和他一致 */
+        h1 {
+            font-weight: normal;
+            font-size: 24px;
+            color: #000;
+            margin-bottom: 30px;
+        }
+        /* 文章容器 */
         .post {
-            margin: 20px 0;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            margin: 30px 0;
         }
+        /* 时间戳：浅灰、小号，和他一致 */
         .post-time {
             color: #666;
             font-size: 14px;
+            margin-bottom: 5px;
         }
-        .post-title {
+        /* 文章标题：无下划线、黑色 */
+        .post-title a {
             font-size: 18px;
-            font-weight: normal;
-            margin: 5px 0;
-        }
-        a {
-            color: #333;
+            color: #000;
             text-decoration: none;
         }
-        a:hover {
+        .post-title a:hover {
             color: #666;
+        }
+        /* 文章内容：和他的文字大小、行间距一致 */
+        .post-content {
+            font-size: 16px;
+            margin-top: 8px;
+            line-height: 1.8;
+        }
+        /* 分隔线：细灰线，和他一致 */
+        hr {
+            border: 0;
+            border-top: 1px solid #eeeeee;
+            margin: 20px 0;
+        }
+        /* 分页样式（可选，他的分页也是极简） */
+        .pagination {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 16px;
+        }
+        .pagination a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .pagination span {
+            color: #999;
+            margin: 0 5px;
         }
     </style>
 </head>
 <body>
+    <!-- 博客标题，和他的顶部标题风格一致 -->
     <h1>我的个人博客</h1>
-    <div class="post-list">
-        <!-- 第一篇文章 -->
-        <div class="post">
-            <div class="post-time">2026/02/28 15:30</div>
-            <div class="post-title"><a href="#">第一篇随笔：Hello 我的博客</a></div>
-            <div class="post-content">
-                这是我的第一篇博客内容，不用备案、免费、简单，太香了～
-            </div>
-        </div>
-        <!-- 第二篇文章 -->
-        <div class="post">
-            <div class="post-time">2026/02/27 10:00</div>
-            <div class="post-title"><a href="#">经典语录</a></div>
-            <div class="post-content">
-                察见渊鱼者不祥，智料隐匿者有殃。
-            </div>
-        </div>
 
-        <!-- 第三篇文章 -->
-        <div class="post">
-            <div class="post-time">2026/02/28 20:00</div>
-            <div class="post-title"><a href="https://github.com/oxweiwei/bigdata/blob/master/sql50%E9%A2%98">sql50题</a></div>
-            <div class="post-content">
-                MySQL练习题。
-            </div>
+    <!-- 第一篇文章 -->
+    <div class="post">
+        <div class="post-time">2026/02/28 15:30</div>
+        <div class="post-title"><a href="#">第一篇随笔：Hello 我的博客</a></div>
+        <div class="post-content">
+            这是我的第一篇博客内容，不用备案、免费、简单，太香了～
         </div>
-<!-- 第三篇文章（优化后） -->
-<div class="post">
-    <div class="post-time">2026/02/28 20:00</div>
-    <!-- 加 target="_blank" 让链接在新标签页打开，保留你的博客页面 -->
-    <div class="post-title"><a href="https://github.com/oxweiwei/bigdata/blob/master/sql50题" target="_blank">sql50题</a></div>
-    <div class="post-content">
-        MySQL练习题。
+        <hr>
     </div>
-</div>
 
-        
+    <!-- 第二篇文章 -->
+    <div class="post">
+        <div class="post-time">2026/02/27 10:00</div>
+        <div class="post-title"><a href="#">经典语录</a></div>
+        <div class="post-content">
+            察见渊鱼者不祥，智料隐匿者有殃。
+        </div>
+        <hr>
+    </div>
+
+    <!-- 第三篇文章（SQL50题，对齐他的格式） -->
+    <div class="post">
+        <div class="post-time">2026/02/28 20:00</div>
+        <div class="post-title"><a href="/sql50.html">sql50题</a></div>
+        <div class="post-content">
+            MySQL练习题。
+        </div>
+        <hr>
+    </div>
+
+    <!-- 分页（可选，他的页面有分页） -->
+    <div class="pagination">
+        <span>上一页</span>
+        <span>第 1 页 / 共 1 页</span>
+        <span>下一页</span>
     </div>
 </body>
 </html>
