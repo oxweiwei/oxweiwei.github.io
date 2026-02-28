@@ -1,0 +1,64 @@
+---
+layout: default
+title: 我的个人博客
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <style>
+        /* 极简样式，复刻纯文字博客 */
+        body {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 微软雅黑, sans-serif;
+            line-height: 1.8;
+            color: #333;
+        }
+        .post {
+            margin: 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .post-time {
+            color: #666;
+            font-size: 14px;
+        }
+        .post-title {
+            font-size: 18px;
+            font-weight: normal;
+            margin: 5px 0;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>我的个人博客</h1>
+    <div class="post-list">
+        <!-- 第一篇文章 -->
+        <div class="post">
+            <div class="post-time">2026/02/28 15:30</div>
+            <div class="post-title"><a href="#">第一篇随笔：Hello 我的博客</a></div>
+            <div class="post-content">
+                这是我的第一篇博客内容，不用备案、免费、简单，太香了～
+            </div>
+        </div>
+        <!-- 第二篇文章 -->
+        <div class="post">
+            <div class="post-time">2026/02/27 10:00</div>
+            <div class="post-title"><a href="#">经典语录</a></div>
+            <div class="post-content">
+                察见渊鱼者不祥，智料隐匿者有殃。
+            </div>
+        </div>
+    </div>
+</body>
+</html>
