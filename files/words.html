@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>语录集 | Boxz</title>
-    <!-- 引入Tailwind CSS简化样式编写 -->
+    
+    <!-- 外部资源引入 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入字体图标 -->
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     
-    <!-- 自定义配置 -->
+    <!-- Tailwind 自定义配置 -->
     <script>
         tailwind.config = {
             theme: {
@@ -29,8 +29,10 @@
         }
     </script>
     
+    <!-- 自定义样式 -->
     <style type="text/tailwindcss">
         @layer utilities {
+            /* 通用样式类 */
             .quote-card {
                 @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 mb-6 border-l-4 border-accent;
             }
@@ -43,10 +45,51 @@
             .container-custom {
                 @apply max-w-3xl mx-auto px-4 py-8;
             }
+            /* 悬浮注释样式 */
+            .tooltip-text {
+                @apply relative cursor-help border-b border-gray-300 hover:border-accent transition-colors;
+            }
+        }
+
+        /* 悬浮注释核心样式 */
+        [data-tooltip] {
+            position: relative;
+        }
+        [data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: pre-wrap;
+            max-width: 300px;
+            background-color: theme('colors.primary');
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.5;
+            z-index: 9999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            font-weight: normal;
+            font-family: theme('fontFamily.sans');
+        }
+        [data-tooltip]:hover::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: theme('colors.primary') transparent transparent transparent;
+            z-index: 9999;
         }
     </style>
 </head>
+
 <body class="bg-light min-h-screen">
+    <!-- 头部区域 -->
     <header class="bg-primary text-white py-6 mb-8">
         <div class="container-custom">
             <h1 class="text-3xl font-bold flex items-center">
@@ -57,97 +100,43 @@
         </div>
     </header>
 
+    <!-- 主内容区域 -->
     <main class="container-custom">
-        <!-- 语录卡片列表 -->
-        <div class="quote-list space-y-4">
-            <!-- 第一条语录 -->
+        <!-- 语录列表 -->
+        <div class="quote-list space-y-6">
+            <!-- 语录1：苦功、内功、外功 -->
             <div class="quote-card">
-                <p class="quote-text">苦功，内功，外功。</p>
+                <p class="quote-text">
+                    苦功<sup><i class="fa fa-question-circle text-accent cursor-help" title="反人性的刻意练习，执行力；"></i></sup>，
+                    内功<sup><i class="fa fa-question-circle text-accent cursor-help" title="内功练心法，求通透。内在的认知、思维。"></i></sup>，
+                    外功<sup><i class="fa fa-question-circle text-accent cursor-help" title="外功练技能、招式，熟能生巧；"></i></sup>。
+                </p>
                 <div class="quote-meta">
                     <span><i class="fa fa-user mr-1"></i> boxz</span>
                     <span><i class="fa fa-calendar mr-1"></i> 2026-03-02</span>
                 </div>
             </div>
 
-            <!-- 第一条语录 -->
-<div class="quote-card">
-    <p class="quote-text">
-        苦功<sup><i class="fa fa-question-circle text-accent cursor-help" title="反人性的刻意练习，执行力；"></i></sup>，
-        内功<sup><i class="fa fa-question-circle text-accent cursor-help" title="内功练心法，求通透。内在的认知、思维。"></i></sup>，
-        外功<sup><i class="fa fa-question-circle text-accent cursor-help" title="外功练技能、招式，熟能生巧；"></i></sup>。
-    </p>
-    <div class="quote-meta">
-        <span><i class="fa fa-user mr-1"></i> boxz</span>
-        <span><i class="fa fa-calendar mr-1"></i> 2026-03-02</span>
-    </div>
-</div>
-
-            <!-- 第二条语录 -->
+            <!-- 语录2：毕竟几人真得鹿 -->
             <div class="quote-card">
-                <p class="quote-text">毕竟几人真得鹿，不知终日梦为鱼</p>
+                <p class="quote-text">
+                    <span class="tooltip-text" data-tooltip="注释：此句出自《杂诗》，鹿象征功名利禄，鱼代表平凡自在，意为世人多追逐虚妄的功名利禄，却不知终日活在虚幻的梦境中，不如安于本心。">
+                        毕竟几人真得鹿，不知终日梦为鱼
+                    </span>
+                </p>
                 <div class="quote-meta">
                     <span><i class="fa fa-user mr-1"></i> boxz</span>
                     <span><i class="fa fa-calendar mr-1"></i> 2026-03-01</span>
                 </div>
             </div>
 
-
-            <!-- 第二条语录（整句优雅悬浮注释） -->
-<div class="quote-card">
-    <p class="quote-text">
-        <span class="relative border-b border-gray-300 hover:border-accent transition-colors cursor-help" 
-              data-tooltip="注释：此句出自《杂诗》，鹿象征功名利禄，鱼代表平凡自在，意为世人多追逐虚妄的功名利禄，却不知终日活在虚幻的梦境中，不如安于本心。">
-            毕竟几人真得鹿，不知终日梦为鱼
-        </span>
-    </p>
-    <div class="quote-meta">
-        <span><i class="fa fa-user mr-1"></i> boxz</span>
-        <span><i class="fa fa-calendar mr-1"></i> 2026-03-01</span>
-    </div>
-</div>
-
-<!-- 需在 </style> 前新增tooltip样式（如果之前没有） -->
-<style type="text/tailwindcss">
-    /* 悬浮注释样式 */
-    [data-tooltip] {
-        position: relative;
-    }
-    [data-tooltip]:hover::after {
-        content: attr(data-tooltip);
-        position: absolute;
-        bottom: 125%; /* 显示在文字上方 */
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: pre-wrap;
-        max-width: 300px;
-        background-color: #2D3748;
-        color: white;
-        padding: 8px 12px;
-        border-radius: 6px;
-        font-size: 14px;
-        line-height: 1.5;
-        z-index: 100;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        font-weight: normal;
-    }
-    /* 小三角装饰 */
-    [data-tooltip]:hover::before {
-        content: '';
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        border-width: 5px;
-        border-style: solid;
-        border-color: #2D3748 transparent transparent transparent;
-        z-index: 100;
-    }
-</style>
-
-            <!-- 新增语录时，直接复制上面的卡片结构修改内容即可 -->
-            <!-- 
+            <!-- 新增语录模板（复制此处修改）
             <div class="quote-card">
-                <p class="quote-text">这里填写新的语录内容</p>
+                <p class="quote-text">
+                    <span class="tooltip-text" data-tooltip="此处填写注释内容">
+                        此处填写语录内容
+                    </span>
+                </p>
                 <div class="quote-meta">
                     <span><i class="fa fa-user mr-1"></i> boxz</span>
                     <span><i class="fa fa-calendar mr-1"></i> 2026-XX-XX</span>
@@ -163,6 +152,7 @@
         </div>
     </main>
 
+    <!-- 页脚区域 -->
     <footer class="mt-16 bg-primary text-white py-4 text-center text-sm">
         <p>© 2026 boxz 语录集 | 简单记录，用心生活</p>
     </footer>
