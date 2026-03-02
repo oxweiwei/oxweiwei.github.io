@@ -91,6 +91,59 @@
                 </div>
             </div>
 
+
+            <!-- 第二条语录（整句优雅悬浮注释） -->
+<div class="quote-card">
+    <p class="quote-text">
+        <span class="relative border-b border-gray-300 hover:border-accent transition-colors cursor-help" 
+              data-tooltip="注释：此句出自《杂诗》，鹿象征功名利禄，鱼代表平凡自在，意为世人多追逐虚妄的功名利禄，却不知终日活在虚幻的梦境中，不如安于本心。">
+            毕竟几人真得鹿，不知终日梦为鱼
+        </span>
+    </p>
+    <div class="quote-meta">
+        <span><i class="fa fa-user mr-1"></i> boxz</span>
+        <span><i class="fa fa-calendar mr-1"></i> 2026-03-01</span>
+    </div>
+</div>
+
+<!-- 需在 </style> 前新增tooltip样式（如果之前没有） -->
+<style type="text/tailwindcss">
+    /* 悬浮注释样式 */
+    [data-tooltip] {
+        position: relative;
+    }
+    [data-tooltip]:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 125%; /* 显示在文字上方 */
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: pre-wrap;
+        max-width: 300px;
+        background-color: #2D3748;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 1.5;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        font-weight: normal;
+    }
+    /* 小三角装饰 */
+    [data-tooltip]:hover::before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: #2D3748 transparent transparent transparent;
+        z-index: 100;
+    }
+</style>
+
             <!-- 新增语录时，直接复制上面的卡片结构修改内容即可 -->
             <!-- 
             <div class="quote-card">
