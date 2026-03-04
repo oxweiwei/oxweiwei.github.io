@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大模型英语学习计划 | 大数据工程师专属</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入字体图标 -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3748',
+                        secondary: '#4A5568',
+                        accent: '#9F7AEA',
+                        light: '#F7FAFC',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .card {
+                @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 mb-6;
+            }
+            .section-title {
+                @apply text-xl md:text-2xl font-bold text-primary mb-4 flex items-center;
+            }
+            .word-item {
+                @apply py-2 px-3 border-b border-gray-100 flex justify-between;
+            }
+            .word-eng {
+                @apply font-medium text-accent;
+            }
+            .word-cn {
+                @apply text-secondary;
+            }
+            .plan-item {
+                @apply py-2 flex items-start;
+            }
+            .plan-icon {
+                @apply text-accent mr-3 mt-1;
+            }
+            .container-custom {
+                @apply max-w-4xl mx-auto px-4 py-8;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light min-h-screen">
+    <!-- 头部区域 -->
+    <header class="bg-primary text-white py-6 mb-8">
+        <div class="container-custom">
+            <h1 class="text-3xl font-bold flex items-center">
+                <i class="fa fa-book mr-3"></i>
+                大模型英语学习计划
+            </h1>
+            <p class="mt-2 text-gray-300">大数据工程师专属 | 每天25分钟，攻克技术英语</p>
+        </div>
+    </header>
+
+    <!-- 主内容区域 -->
+    <main class="container-custom">
+        <!-- 词汇表区域 -->
+        <div class="card">
+            <h2 class="section-title">
+                <i class="fa fa-list-ul"></i> 必背100词（按场景分类）
+            </h2>
+            
+            <!-- 基础通用 -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-primary mb-2">1）基础通用（20）</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+                    <div class="word-item"><span class="word-eng">model</span><span class="word-cn">模型</span></div>
+                    <div class="word-item"><span class="word-eng">train</span><span class="word-cn">训练</span></div>
+                    <div class="word-item"><span class="word-eng">test</span><span class="word-cn">测试</span></div>
+                    <div class="word-item"><span class="word-eng">run</span><span class="word-cn">运行</span></div>
+                    <div class="word-item"><span class="word-eng">load</span><span class="word-cn">加载</span></div>
+                    <div class="word-item"><span class="word-eng">save</span><span class="word-cn">保存</span></div>
+                    <div class="word-item"><span class="word-eng">data</span><span class="word-cn">数据</span></div>
+                    <div class="word-item"><span class="word-eng">file</span><span class="word-cn">文件</span></div>
+                    <div class="word-item"><span class="word-eng">path</span><span class="word-cn">路径</span></div>
+                    <div class="word-item"><span class="word-eng">config</span><span class="word-cn">配置</span></div>
+                    <div class="word-item"><span class="word-eng">parameter</span><span class="word-cn">参数</span></div>
+                    <div class="word-item"><span class="word-eng">value</span><span class="word-cn">值</span></div>
+                    <div class="word-item"><span class="word-eng">key</span><span class="word-cn">键</span></div>
+                    <div class="word-item"><span class="word-eng">result</span><span class="word-cn">结果</span></div>
+                    <div class="word-item"><span class="word-eng">output</span><span class="word-cn">输出</span></div>
+                    <div class="word-item"><span class="word-eng">input</span><span class="word-cn">输入</span></div>
+                    <div class="word-item"><span class="word-eng">error</span><span class="word-cn">错误</span></div>
+                    <div class="word-item"><span class="word-eng">warning</span><span class="word-cn">警告</span></div>
+                    <div class="word-item"><span class="word-eng">log</span><span class="word-cn">日志</span></div>
+                    <div class="word-item"><span class="word-eng">version</span><span class="word-cn">版本</span></div>
+                </div>
+            </div>
+
+            <!-- 大模型核心 -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-primary mb-2">2）大模型核心（20）</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+                    <div class="word-item"><span class="word-eng">large language model</span><span class="word-cn">大语言模型</span></div>
+                    <div class="word-item"><span class="word-eng">LLM</span><span class="word-cn">大模型</span></div>
+                    <div class="word-item"><span class="word-eng">prompt</span><span class="word-cn">提示词</span></div>
+                    <div class="word-item"><span class="word-eng">token</span><span class="word-cn">令牌</span></div>
+                    <div class="word-item"><span class="word-eng">embedding</span><span class="word-cn">向量/嵌入</span></div>
+                    <div class="word-item"><span class="word-eng">layer</span><span class="word-cn">层</span></div>
+                    <div class="word-item"><span class="word-eng">neuron</span><span class="word-cn">神经元</span></div>
+                    <div class="word-item"><span class="word-eng">attention</span><span class="word-cn">注意力</span></div>
+                    <div class="word-item"><span class="word-eng">transformer</span><span class="word-cn">Transformer架构</span></div>
+                    <div class="word-item"><span class="word-eng">encoder</span><span class="word-cn">编码器</span></div>
+                    <div class="word-item"><span class="word-eng">decoder</span><span class="word-cn">解码器</span></div>
+                    <div class="word-item"><span class="word-eng">inference</span><span class="word-cn">推理</span></div>
+                    <div class="word-item"><span class="word-eng">fine-tune</span><span class="word-cn">微调</span></div>
+                    <div class="word-item"><span class="word-eng">pre-train</span><span class="word-cn">预训练</span></div>
+                    <div class="word-item"><span class="word-eng">checkpoint</span><span class="word-cn">checkpoint/权重文件</span></div>
+                    <div class="word-item"><span class="word-eng">weight</span><span class="word-cn">权重</span></div>
+                    <div class="word-item"><span class="word-eng">bias</span><span class="word-cn">偏置</span></div>
+                    <div class="word-item"><span class="word-eng">vector</span><span class="word-cn">向量</span></div>
+                    <div class="word-item"><span class="word-eng">dimension</span><span class="word-cn">维度</span></div>
+                    <div class="word-item"><span class="word-eng">context</span><span class="word-cn">上下文</span></div>
+                </div>
+            </div>
+
+            <!-- 训练与评估 -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-primary mb-2">3）训练与评估（20）</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+                    <div class="word-item"><span class="word-eng">dataset</span><span class="word-cn">数据集</span></div>
+                    <div class="word-item"><span class="word-eng">batch</span><span class="word-cn">批次</span></div>
+                    <div class="word-item"><span class="word-eng">epoch</span><span class="word-cn">轮次</span></div>
+                    <div class="word-item"><span class="word-eng">iteration</span><span class="word-cn">迭代</span></div>
+                    <div class="word-item"><span class="word-eng">loss</span><span class="word-cn">损失</span></div>
+                    <div class="word-item"><span class="word-eng">accuracy</span><span class="word-cn">精度</span></div>
+                    <div class="word-item"><span class="word-eng">score</span><span class="word-cn">分数</span></div>
+                    <div class="word-item"><span class="word-eng">metric</span><span class="word-cn">指标</span></div>
+                    <div class="word-item"><span class="word-eng">optimize</span><span class="word-cn">优化</span></div>
+                    <div class="word-item"><span class="word-eng">optimizer</span><span class="word-cn">优化器</span></div>
+                    <div class="word-item"><span class="word-eng">learning rate</span><span class="word-cn">学习率</span></div>
+                    <div class="word-item"><span class="word-eng">gradient</span><span class="word-cn">梯度</span></div>
+                    <div class="word-item"><span class="word-eng">update</span><span class="word-cn">更新</span></div>
+                    <div class="word-item"><span class="word-eng">converge</span><span class="word-cn">收敛</span></div>
+                    <div class="word-item"><span class="word-eng">overfit</span><span class="word-cn">过拟合</span></div>
+                    <div class="word-item"><span class="word-eng">underfit</span><span class="word-cn">欠拟合</span></div>
+                    <div class="word-item"><span class="word-eng">validate</span><span class="word-cn">验证</span></div>
+                    <div class="word-item"><span class="word-eng">evaluation</span><span class="word-cn">评估</span></div>
+                    <div class="word-item"><span class="word-eng">classification</span><span class="word-cn">分类</span></div>
+                    <div class="word-item"><span class="word-eng">regression</span><span class="word-cn">回归</span></div>
+                </div>
+            </div>
+
+            <!-- 部署 & 工程 -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-primary mb-2">4）部署 & 工程（20）</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+                    <div class="word-item"><span class="word-eng">deploy</span><span class="word-cn">部署</span></div>
+                    <div class="word-item"><span class="word-eng">service</span><span class="word-cn">服务</span></div>
+                    <div class="word-item"><span class="word-eng">API</span><span class="word-cn">接口</span></div>
+                    <div class="word-item"><span class="word-eng">endpoint</span><span class="word-cn">端点</span></div>
+                    <div class="word-item"><span class="word-eng">server</span><span class="word-cn">服务器</span></div>
+                    <div class="word-item"><span class="word-eng">client</span><span class="word-cn">客户端</span></div>
+                    <div class="word-item"><span class="word-eng">request</span><span class="word-cn">请求</span></div>
+                    <div class="word-item"><span class="word-eng">response</span><span class="word-cn">响应</span></div>
+                    <div class="word-item"><span class="word-eng">parallel</span><span class="word-cn">并行</span></div>
+                    <div class="word-item"><span class="word-eng">distributed</span><span class="word-cn">分布式</span></div>
+                    <div class="word-item"><span class="word-eng">cluster</span><span class="word-cn">集群</span></div>
+                    <div class="word-item"><span class="word-eng">node</span><span class="word-cn">节点</span></div>
+                    <div class="word-item"><span class="word-eng">resource</span><span class="word-cn">资源</span></div>
+                    <div class="word-item"><span class="word-eng">memory</span><span class="word-cn">内存</span></div>
+                    <div class="word-item"><span class="word-eng">GPU</span><span class="word-cn">显卡</span></div>
+                    <div class="word-item"><span class="word-eng">CPU</span><span class="word-cn">处理器</span></div>
+                    <div class="word-item"><span class="word-eng">latency</span><span class="word-cn">延迟</span></div>
+                    <div class="word-item"><span class="word-eng">throughput</span><span class="word-cn">吞吐量</span></div>
+                    <div class="word-item"><span class="word-eng">cache</span><span class="word-cn">缓存</span></div>
+                    <div class="word-item"><span class="word-eng">performance</span><span class="word-cn">性能</span></div>
+                </div>
+            </div>
+
+            <!-- 大数据 + AI 交叉 -->
+            <div>
+                <h3 class="text-lg font-semibold text-primary mb-2">5）大数据 + AI 交叉（20）</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+                    <div class="word-item"><span class="word-eng">ETL</span><span class="word-cn">抽取转换加载</span></div>
+                    <div class="word-item"><span class="word-eng">stream</span><span class="word-cn">流</span></div>
+                    <div class="word-item"><span class="word-eng">warehouse</span><span class="word-cn">数仓</span></div>
+                    <div class="word-item"><span class="word-eng">lake</span><span class="word-cn">湖仓</span></div>
+                    <div class="word-item"><span class="word-eng">schema</span><span class="word-cn">表结构</span></div>
+                    <div class="word-item"><span class="word-eng">table</span><span class="word-cn">表</span></div>
+                    <div class="word-item"><span class="word-eng">column</span><span class="word-cn">列</span></div>
+                    <div class="word-item"><span class="word-eng">row</span><span class="word-cn">行</span></div>
+                    <div class="word-item"><span class="word-eng">join</span><span class="word-cn">关联</span></div>
+                    <div class="word-item"><span class="word-eng">filter</span><span class="word-cn">过滤</span></div>
+                    <div class="word-item"><span class="word-eng">aggregate</span><span class="word-cn">聚合</span></div>
+                    <div class="word-item"><span class="word-eng">index</span><span class="word-cn">索引</span></div>
+                    <div class="word-item"><span class="word-eng">partition</span><span class="word-cn">分区</span></div>
+                    <div class="word-item"><span class="word-eng">shuffle</span><span class="word-cn">洗牌</span></div>
+                    <div class="word-item"><span class="word-eng">sink</span><span class="word-cn">输出</span></div>
+                    <div class="word-item"><span class="word-eng">source</span><span class="word-cn">源</span></div>
+                    <div class="word-item"><span class="word-eng">real-time</span><span class="word-cn">实时</span></div>
+                    <div class="word-item"><span class="word-eng">offline</span><span class="word-cn">离线</span></div>
+                    <div class="word-item"><span class="word-eng">pipeline</span><span class="word-cn">流水线</span></div>
+                    <div class="word-item"><span class="word-eng">feature</span><span class="word-cn">特征</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 每日计划区域 -->
+        <div class="card">
+            <h2 class="section-title">
+                <i class="fa fa-calendar-check-o"></i> 每日学习计划（25分钟）
+            </h2>
+            <div class="space-y-4">
+                <div class="plan-item">
+                    <i class="fa fa-clock-o plan-icon"></i>
+                    <div>
+                        <strong class="text-primary">1）背单词 10分钟</strong>
+                        <p class="text-secondary text-sm mt-1">每天10个词，只记「英文→中文技术含义」，不用拼写、不用读音</p>
+                    </div>
+                </div>
+                <div class="plan-item">
+                    <i class="fa fa-file-text-o plan-icon"></i>
+                    <div>
+                        <strong class="text-primary">2）读英文文档 10分钟</strong>
+                        <p class="text-secondary text-sm mt-1">材料：GitHub README → Hugging Face 文档 → 技术博客；不会的词立刻查，读懂大意即可</p>
+                    </div>
+                </div>
+                <div class="plan-item">
+                    <i class="fa fa-code plan-icon"></i>
+                    <div>
+                        <strong class="text-primary">3）看代码注释 5分钟</strong>
+                        <p class="text-secondary text-sm mt-1">打开PyTorch/LLM项目，看英文注释→想中文含义，强化技术英语记忆</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 工具流区域 -->
+        <div class="card">
+            <h2 class="section-title">
+                <i class="fa fa-wrench"></i> 必备工具流
+            </h2>
+            <div class="space-y-3">
+                <div class="plan-item">
+                    <i class="fa fa-chrome plan-icon"></i>
+                    <div>
+                        <strong class="text-primary">沉浸式翻译（Chrome插件）</strong>
+                        <p class="text-secondary text-sm mt-1">看英文文档时，左边英文、右边中文，无缝对照</p>
+                    </div>
+                </div>
+                <div class="plan-item">
+                    <i class="fa fa-book plan-icon"></i>
+                    <div>
+                        <strong class="text-primary">欧路词典/有道词典</strong>
+                        <p class="text-secondary text-sm mt-1">鼠标取词，即指即译，快速查技术词汇</p>
+                    </div>
+                </div>
+                <div class="plan-item">
+                    <i class="fa fa-link plan-icon"></i>
+                    <div>
+                        <strong class="text-primary">推荐阅读材料</strong>
+                        <p class="text-secondary text-sm mt-1">1. Hugging Face Docs | 2. PyTorch Docs | 3. GitHub awesome-llm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 目标区域 -->
+        <div class="card">
+            <h2 class="section-title">
+                <i class="fa fa-bullseye"></i> 10天小目标
+            </h2>
+            <ul class="list-disc list-inside text-secondary space-y-2">
+                <li>看懂大模型文档标题、摘要</li>
+                <li>看懂GitHub项目介绍</li>
+                <li>看懂训练/推理代码注释</li>
+                <li>遇到生词能自己查明白</li>
+            </ul>
+            <div class="mt-4 p-4 bg-accent/10 rounded-lg text-center">
+                <p class="text-primary font-medium">达到以上目标，即可开始学习大模型核心内容！</p>
+            </div>
+        </div>
+
+        <!-- 底部提示 -->
+        <div class="mt-8 text-center text-secondary text-sm">
+            <p>最后更新：2026-03-04</p>
+            <p class="mt-1"><i class="fa fa-pencil"></i> 可直接在HTML中新增词汇/调整计划</p>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="mt-16 bg-primary text-white py-4 text-center text-sm">
+        <p>© 2026 大数据工程师转大模型 | 技术英语提升计划</p>
+    </footer>
+</body>
+</html>
