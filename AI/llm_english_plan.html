@@ -1,305 +1,629 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大模型英语学习计划 | 大数据工程师专属</title>
-    <!-- 引入Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入字体图标 -->
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
-    <!-- 自定义配置 -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2D3748',
-                        secondary: '#4A5568',
-                        accent: '#9F7AEA',
-                        light: '#F7FAFC',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        serif: ['Noto Serif SC', 'serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .card {
-                @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 mb-6;
-            }
-            .section-title {
-                @apply text-xl md:text-2xl font-bold text-primary mb-4 flex items-center;
-            }
-            .word-item {
-                @apply py-2 px-3 border-b border-gray-100 flex justify-between;
-            }
-            .word-eng {
-                @apply font-medium text-accent;
-            }
-            .word-cn {
-                @apply text-secondary;
-            }
-            .plan-item {
-                @apply py-2 flex items-start;
-            }
-            .plan-icon {
-                @apply text-accent mr-3 mt-1;
-            }
-            .container-custom {
-                @apply max-w-4xl mx-auto px-4 py-8;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.9">
+<title>大模型英语 - 单词+例句+行业常识 | boxz</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { primary:'#2D3748', accent:'#9F7AEA', light:'#F7FAFC' }
+  }}
+}
+</script>
+<style type="text/tailwindcss">
+@layer utilities {
+  .container-box { @apply max-w-3xl mx-auto px-4 py-10 }
+  .sentence-card { @apply bg-white rounded-xl p-5 mb-4 shadow hover:shadow-md transition }
+  .eng { @apply text-primary font-medium mb-1 }
+  .chn { @apply text-gray-600 text-sm mb-2 }
+  .word { @apply inline-block px-2 py-0.5 rounded bg-accent/10 text-accent text-sm mr-1 mb-1 }
+  .term-tag { @apply inline-block px-2 py-1 rounded bg-blue-100 text-blue-700 text-xs ml-2 }
+}
+</style>
 </head>
-<body class="bg-light min-h-screen">
-    <!-- 头部区域 -->
-    <header class="bg-primary text-white py-6 mb-8">
-        <div class="container-custom">
-            <h1 class="text-3xl font-bold flex items-center">
-                <i class="fa fa-book mr-3"></i>
-                大模型英语学习计划
-            </h1>
-            <p class="mt-2 text-gray-300">大数据工程师专属 | 每天25分钟，攻克技术英语</p>
-        </div>
-    </header>
 
-    <!-- 主内容区域 -->
-    <main class="container-custom">
-        <!-- 词汇表区域 -->
-        <div class="card">
-            <h2 class="section-title">
-                <i class="fa fa-list-ul"></i> 必背100词（按场景分类）
-            </h2>
-            
-            <!-- 基础通用 -->
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold text-primary mb-2">1）基础通用（20）</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
-                    <div class="word-item"><span class="word-eng">model</span><span class="word-cn">模型</span></div>
-                    <div class="word-item"><span class="word-eng">train</span><span class="word-cn">训练</span></div>
-                    <div class="word-item"><span class="word-eng">test</span><span class="word-cn">测试</span></div>
-                    <div class="word-item"><span class="word-eng">run</span><span class="word-cn">运行</span></div>
-                    <div class="word-item"><span class="word-eng">load</span><span class="word-cn">加载</span></div>
-                    <div class="word-item"><span class="word-eng">save</span><span class="word-cn">保存</span></div>
-                    <div class="word-item"><span class="word-eng">data</span><span class="word-cn">数据</span></div>
-                    <div class="word-item"><span class="word-eng">file</span><span class="word-cn">文件</span></div>
-                    <div class="word-item"><span class="word-eng">path</span><span class="word-cn">路径</span></div>
-                    <div class="word-item"><span class="word-eng">config</span><span class="word-cn">配置</span></div>
-                    <div class="word-item"><span class="word-eng">parameter</span><span class="word-cn">参数</span></div>
-                    <div class="word-item"><span class="word-eng">value</span><span class="word-cn">值</span></div>
-                    <div class="word-item"><span class="word-eng">key</span><span class="word-cn">键</span></div>
-                    <div class="word-item"><span class="word-eng">result</span><span class="word-cn">结果</span></div>
-                    <div class="word-item"><span class="word-eng">output</span><span class="word-cn">输出</span></div>
-                    <div class="word-item"><span class="word-eng">input</span><span class="word-cn">输入</span></div>
-                    <div class="word-item"><span class="word-eng">error</span><span class="word-cn">错误</span></div>
-                    <div class="word-item"><span class="word-eng">warning</span><span class="word-cn">警告</span></div>
-                    <div class="word-item"><span class="word-eng">log</span><span class="word-cn">日志</span></div>
-                    <div class="word-item"><span class="word-eng">version</span><span class="word-cn">版本</span></div>
-                </div>
-            </div>
+<body class="bg-light">
+<div class="container-box">
+  <h1 class="text-2xl font-bold text-primary mb-6 flex items-center">
+    <i class="fa fa-language mr-2"></i>大模型英语 · 单词+例句+行业常识
+  </h1>
 
-            <!-- 大模型核心 -->
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold text-primary mb-2">2）大模型核心（20）</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
-                    <div class="word-item"><span class="word-eng">large language model</span><span class="word-cn">大语言模型</span></div>
-                    <div class="word-item"><span class="word-eng">LLM</span><span class="word-cn">大模型</span></div>
-                    <div class="word-item"><span class="word-eng">prompt</span><span class="word-cn">提示词</span></div>
-                    <div class="word-item"><span class="word-eng">token</span><span class="word-cn">令牌</span></div>
-                    <div class="word-item"><span class="word-eng">embedding</span><span class="word-cn">向量/嵌入</span></div>
-                    <div class="word-item"><span class="word-eng">layer</span><span class="word-cn">层</span></div>
-                    <div class="word-item"><span class="word-eng">neuron</span><span class="word-cn">神经元</span></div>
-                    <div class="word-item"><span class="word-eng">attention</span><span class="word-cn">注意力</span></div>
-                    <div class="word-item"><span class="word-eng">transformer</span><span class="word-cn">Transformer架构</span></div>
-                    <div class="word-item"><span class="word-eng">encoder</span><span class="word-cn">编码器</span></div>
-                    <div class="word-item"><span class="word-eng">decoder</span><span class="word-cn">解码器</span></div>
-                    <div class="word-item"><span class="word-eng">inference</span><span class="word-cn">推理</span></div>
-                    <div class="word-item"><span class="word-eng">fine-tune</span><span class="word-cn">微调</span></div>
-                    <div class="word-item"><span class="word-eng">pre-train</span><span class="word-cn">预训练</span></div>
-                    <div class="word-item"><span class="word-eng">checkpoint</span><span class="word-cn">checkpoint/权重文件</span></div>
-                    <div class="word-item"><span class="word-eng">weight</span><span class="word-cn">权重</span></div>
-                    <div class="word-item"><span class="word-eng">bias</span><span class="word-cn">偏置</span></div>
-                    <div class="word-item"><span class="word-eng">vector</span><span class="word-cn">向量</span></div>
-                    <div class="word-item"><span class="word-eng">dimension</span><span class="word-cn">维度</span></div>
-                    <div class="word-item"><span class="word-eng">context</span><span class="word-cn">上下文</span></div>
-                </div>
-            </div>
+  <!-- ========== 基础通用（20句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">We need to <b>train</b> a new model.</div>
+    <div class="chn">我们需要训练一个新模型。</div>
+    <div class="word">train 训练</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">This large language <b>model</b> is powerful.</div>
+    <div class="chn">这个大语言模型非常强。</div>
+    <div class="word">model 模型</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Check <b>input</b> and <b>output</b> format before running the code.</div>
+    <div class="chn">运行代码前检查输入和输出格式。</div>
+    <div class="word">input 输入</div>
+    <div class="word">output 输出</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Load</b> the pretrained model from Hugging Face hub.</div>
+    <div class="chn">从Hugging Face hub加载预训练模型。</div>
+    <div class="word">load 加载</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Save</b> the trained model to local disk for later use.</div>
+    <div class="chn">将训练好的模型保存到本地磁盘备用。</div>
+    <div class="word">save 保存</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Modify the <b>config</b> file to adjust model parameters.</div>
+    <div class="chn">修改配置文件调整模型参数。</div>
+    <div class="word">config 配置</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Set the correct <b>path</b> of the dataset folder.</div>
+    <div class="chn">设置数据集文件夹的正确路径。</div>
+    <div class="word">path 路径</div>
+  </div>
+  <div class="eng">The <b>parameter</b> count of GPT-3 is 175 billion.</div>
+  <div class="chn">GPT-3的参数数量是1750亿。</div>
+  <div class="word">parameter 参数</div>
+  <div class="term-tag">GPT：生成式预训练Transformer，OpenAI推出的大语言模型</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>value</b> of the learning rate is set to 0.001.</div>
+    <div class="chn">学习率的数值设置为0.001。</div>
+    <div class="word">value 值</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>key</b> of the dictionary is "model_name".</div>
+    <div class="chn">字典的键是"model_name"。</div>
+    <div class="word">key 键</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>result</b> shows the model performs well on test data.</div>
+    <div class="chn">结果显示模型在测试数据上表现良好。</div>
+    <div class="word">result 结果</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">A <b>warning</b> appears when the GPU memory is insufficient.</div>
+    <div class="chn">当GPU内存不足时会出现警告。</div>
+    <div class="word">warning 警告</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Check the <b>log</b> file to find the root cause of the error.</div>
+    <div class="chn">查看日志文件找到错误的根本原因。</div>
+    <div class="word">log 日志</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Fix the <b>error</b> in the data loading function.</div>
+    <div class="chn">修复数据加载函数中的错误。</div>
+    <div class="word">error 错误</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Update the model to the latest <b>version</b> for better performance.</div>
+    <div class="chn">将模型更新到最新版本以获得更好的性能。</div>
+    <div class="word">version 版本</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Run</b> the inference script on the GPU server.</div>
+    <div class="chn">在GPU服务器上运行推理脚本。</div>
+    <div class="word">run 运行</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Test</b> the model with 1000 samples of test data.</div>
+    <div class="chn">用1000个测试数据样本测试模型。</div>
+    <div class="word">test 测试</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Read the <b>file</b> in CSV format for data preprocessing.</div>
+    <div class="chn">读取CSV格式的文件进行数据预处理。</div>
+    <div class="word">file 文件</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Clean the raw <b>data</b> to improve model accuracy.</div>
+    <div class="chn">清洗原始数据以提高模型精度。</div>
+    <div class="word">data 数据</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Define a new <b>task</b> for text classification with the LLM.</div>
+    <div class="chn">为大语言模型定义一个文本分类的新任务。</div>
+    <div class="word">task 任务</div>
+    <div class="term-tag">LLM：Large Language Model，大语言模型</div>
+  </div>
 
-            <!-- 训练与评估 -->
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold text-primary mb-2">3）训练与评估（20）</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
-                    <div class="word-item"><span class="word-eng">dataset</span><span class="word-cn">数据集</span></div>
-                    <div class="word-item"><span class="word-eng">batch</span><span class="word-cn">批次</span></div>
-                    <div class="word-item"><span class="word-eng">epoch</span><span class="word-cn">轮次</span></div>
-                    <div class="word-item"><span class="word-eng">iteration</span><span class="word-cn">迭代</span></div>
-                    <div class="word-item"><span class="word-eng">loss</span><span class="word-cn">损失</span></div>
-                    <div class="word-item"><span class="word-eng">accuracy</span><span class="word-cn">精度</span></div>
-                    <div class="word-item"><span class="word-eng">score</span><span class="word-cn">分数</span></div>
-                    <div class="word-item"><span class="word-eng">metric</span><span class="word-cn">指标</span></div>
-                    <div class="word-item"><span class="word-eng">optimize</span><span class="word-cn">优化</span></div>
-                    <div class="word-item"><span class="word-eng">optimizer</span><span class="word-cn">优化器</span></div>
-                    <div class="word-item"><span class="word-eng">learning rate</span><span class="word-cn">学习率</span></div>
-                    <div class="word-item"><span class="word-eng">gradient</span><span class="word-cn">梯度</span></div>
-                    <div class="word-item"><span class="word-eng">update</span><span class="word-cn">更新</span></div>
-                    <div class="word-item"><span class="word-eng">converge</span><span class="word-cn">收敛</span></div>
-                    <div class="word-item"><span class="word-eng">overfit</span><span class="word-cn">过拟合</span></div>
-                    <div class="word-item"><span class="word-eng">underfit</span><span class="word-cn">欠拟合</span></div>
-                    <div class="word-item"><span class="word-eng">validate</span><span class="word-cn">验证</span></div>
-                    <div class="word-item"><span class="word-eng">evaluation</span><span class="word-cn">评估</span></div>
-                    <div class="word-item"><span class="word-eng">classification</span><span class="word-cn">分类</span></div>
-                    <div class="word-item"><span class="word-eng">regression</span><span class="word-cn">回归</span></div>
-                </div>
-            </div>
+  <!-- ========== 大模型核心（25句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">We will <b>fine-tune</b> the LLM on our domain-specific dataset.</div>
+    <div class="chn">我们将在领域专属数据集上微调大语言模型。</div>
+    <div class="word">fine-tune 微调</div>
+    <div class="term-tag">微调：在预训练模型基础上，用小数据集适配特定任务</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Write a clear <b>prompt</b> to guide the LLM to generate correct answers.</div>
+    <div class="chn">写一个清晰的提示词引导大语言模型生成正确答案。</div>
+    <div class="word">prompt 提示词</div>
+    <div class="term-tag">提示词：输入给LLM的指令，决定模型输出方向</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">This text is tokenized into 128 <b>token</b>s for model input.</div>
+    <div class="chn">这段文本被分词为128个令牌作为模型输入。</div>
+    <div class="word">token 令牌</div>
+    <div class="term-tag">Token：LLM的最小处理单位，一个汉字/单词通常拆为1-3个Token</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Embedding</b> converts text into numerical vectors for computation.</div>
+    <div class="chn">嵌入将文本转换为数值向量以便计算。</div>
+    <div class="word">embedding 嵌入/向量</div>
+    <div class="term-tag">Embedding：文本的向量表示，保留语义信息</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>transformer</b> model has 12 encoder layers and 12 decoder layers.</div>
+    <div class="chn">这个Transformer模型有12层编码器和12层解码器。</div>
+    <div class="word">transformer 架构</div>
+    <div class="term-tag">Transformer：2017年提出的深度学习架构，是LLM的核心</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>encoder</b> processes the input text and extracts semantic features.</div>
+    <div class="chn">编码器处理输入文本并提取语义特征。</div>
+    <div class="word">encoder 编码器</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>decoder</b> generates the output text based on encoder features.</div>
+    <div class="chn">解码器基于编码器特征生成输出文本。</div>
+    <div class="word">decoder 解码器</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Attention</b> mechanism allows the model to focus on relevant tokens.</div>
+    <div class="chn">注意力机制让模型聚焦于相关的令牌。</div>
+    <div class="word">attention 注意力</div>
+    <div class="term-tag">注意力机制：Transformer核心，模拟人类阅读时的注意力聚焦</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Inference</b> speed of quantized LLM is 3x faster than the original.</div>
+    <div class="chn">量化后的大语言模型推理速度是原模型的3倍。</div>
+    <div class="word">inference 推理</div>
+    <div class="term-tag">推理：模型接收输入生成输出的过程（区别于训练）</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Pre-train</b> the model on a large corpus before fine-tuning.</div>
+    <div class="chn">微调前先在大规模语料库上预训练模型。</div>
+    <div class="word">pre-train 预训练</div>
+    <div class="term-tag">预训练：在海量通用数据上训练模型，获得基础语言能力</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Load the latest <b>checkpoint</b> to resume the interrupted training.</div>
+    <div class="chn">加载最新的权重文件恢复中断的训练。</div>
+    <div class="word">checkpoint 权重/断点</div>
+    <div class="term-tag">Checkpoint：训练过程中保存的模型权重和优化器状态</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>weight</b> of each neuron is updated during training.</div>
+    <div class="chn">训练过程中每个神经元的权重都会更新。</div>
+    <div class="word">weight 权重</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Adjust the <b>bias</b> term to reduce model prediction error.</div>
+    <div class="chn">调整偏置项以降低模型预测误差。</div>
+    <div class="word">bias 偏置</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Vector</b> similarity is used to retrieve relevant documents in RAG.</div>
+    <div class="chn">向量相似度用于在RAG中检索相关文档。</div>
+    <div class="word">vector 向量</div>
+    <div class="term-tag">RAG：检索增强生成，提升LLM事实性和准确性的技术</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>dimension</b> of the embedding vector is 768 for BERT-base model.</div>
+    <div class="chn">BERT-base模型的嵌入向量维度是768。</div>
+    <div class="word">dimension 维度</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>context</b> window of GPT-4 is 8192 tokens.</div>
+    <div class="chn">GPT-4的上下文窗口是8192个令牌。</div>
+    <div class="word">context 上下文</div>
+    <div class="term-tag">上下文窗口：LLM能处理的最大输入Token数，越大能记住越多信息</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Each <b>layer</b> of the transformer adds more semantic understanding.</div>
+    <div class="chn">Transformer的每一层都增加更多语义理解能力。</div>
+    <div class="word">layer 层</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">A single <b>neuron</b> receives input from multiple neurons in the previous layer.</div>
+    <div class="chn">单个神经元接收来自上一层多个神经元的输入。</div>
+    <div class="word">neuron 神经元</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">LoRA is a lightweight method to <b>fine-tune</b> large language models.</div>
+    <div class="chn">LoRA是一种轻量级的大语言模型微调方法。</div>
+    <div class="word">fine-tune 微调</div>
+    <div class="term-tag">LoRA：低秩适配，减少微调参数量的高效方法</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Prompt engineering optimizes <b>prompt</b> design for better LLM output.</div>
+    <div class="chn">提示词工程优化提示词设计以获得更好的大模型输出。</div>
+    <div class="word">prompt 提示词</div>
+    <div class="term-tag">提示词工程：设计最优提示词的方法论</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Tokenization splits text into <b>token</b>s based on vocabulary.</div>
+    <div class="chn">分词根据词汇表将文本拆分为令牌。</div>
+    <div class="word">token 令牌</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Sentence-BERT generates high-quality <b>embedding</b>s for sentences.</div>
+    <div class="chn">Sentence-BERT为句子生成高质量的嵌入向量。</div>
+    <div class="word">embedding 嵌入</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Multi-head <b>attention</b> captures different types of semantic relationships.</div>
+    <div class="chn">多头注意力捕捉不同类型的语义关系。</div>
+    <div class="word">attention 注意力</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The decoder uses masked <b>attention</b> to avoid seeing future tokens.</div>
+    <div class="chn">解码器使用掩码注意力避免看到未来的令牌。</div>
+    <div class="word">attention 注意力</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Quantization reduces the precision of model <b>weight</b>s to save memory.</div>
+    <div class="chn">量化降低模型权重精度以节省内存。</div>
+    <div class="word">weight 权重</div>
+    <div class="term-tag">量化：将模型权重从FP32转为INT8/4，降低显存占用</div>
+  </div>
 
-            <!-- 部署 & 工程 -->
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold text-primary mb-2">4）部署 & 工程（20）</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
-                    <div class="word-item"><span class="word-eng">deploy</span><span class="word-cn">部署</span></div>
-                    <div class="word-item"><span class="word-eng">service</span><span class="word-cn">服务</span></div>
-                    <div class="word-item"><span class="word-eng">API</span><span class="word-cn">接口</span></div>
-                    <div class="word-item"><span class="word-eng">endpoint</span><span class="word-cn">端点</span></div>
-                    <div class="word-item"><span class="word-eng">server</span><span class="word-cn">服务器</span></div>
-                    <div class="word-item"><span class="word-eng">client</span><span class="word-cn">客户端</span></div>
-                    <div class="word-item"><span class="word-eng">request</span><span class="word-cn">请求</span></div>
-                    <div class="word-item"><span class="word-eng">response</span><span class="word-cn">响应</span></div>
-                    <div class="word-item"><span class="word-eng">parallel</span><span class="word-cn">并行</span></div>
-                    <div class="word-item"><span class="word-eng">distributed</span><span class="word-cn">分布式</span></div>
-                    <div class="word-item"><span class="word-eng">cluster</span><span class="word-cn">集群</span></div>
-                    <div class="word-item"><span class="word-eng">node</span><span class="word-cn">节点</span></div>
-                    <div class="word-item"><span class="word-eng">resource</span><span class="word-cn">资源</span></div>
-                    <div class="word-item"><span class="word-eng">memory</span><span class="word-cn">内存</span></div>
-                    <div class="word-item"><span class="word-eng">GPU</span><span class="word-cn">显卡</span></div>
-                    <div class="word-item"><span class="word-eng">CPU</span><span class="word-cn">处理器</span></div>
-                    <div class="word-item"><span class="word-eng">latency</span><span class="word-cn">延迟</span></div>
-                    <div class="word-item"><span class="word-eng">throughput</span><span class="word-cn">吞吐量</span></div>
-                    <div class="word-item"><span class="word-eng">cache</span><span class="word-cn">缓存</span></div>
-                    <div class="word-item"><span class="word-eng">performance</span><span class="word-cn">性能</span></div>
-                </div>
-            </div>
+  <!-- ========== 训练与评估（20句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">This <b>dataset</b> contains 1 million Chinese text samples.</div>
+    <div class="chn">这个数据集包含100万条中文文本样本。</div>
+    <div class="word">dataset 数据集</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Set the <b>batch</b> size to 32 for stable training on 8 GPUs.</div>
+    <div class="chn">将批次大小设置为32，以便在8块GPU上稳定训练。</div>
+    <div class="word">batch 批次</div>
+    <div class="term-tag">Batch Size：一次送入模型训练的样本数，越大越稳定但占显存</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">We run 10 <b>epoch</b>s for training and validate after each epoch.</div>
+    <div class="chn">我们训练10轮，每轮后进行验证。</div>
+    <div class="word">epoch 轮次</div>
+    <div class="term-tag">Epoch：模型完整遍历一次训练集的次数</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Each <b>iteration</b> processes one batch of data during training.</div>
+    <div class="chn">训练过程中每次迭代处理一批数据。</div>
+    <div class="word">iteration 迭代</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>loss</b> function measures the difference between prediction and label.</div>
+    <div class="chn">损失函数衡量预测值和标签值的差异。</div>
+    <div class="word">loss 损失</div>
+    <div class="term-tag">损失函数：训练的优化目标，值越小模型预测越准</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The model achieves 95% <b>accuracy</b> on the test dataset.</div>
+    <div class="chn">模型在测试数据集上达到95%的精度。</div>
+    <div class="word">accuracy 精度</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The F1 <b>score</b> is a better metric for imbalanced datasets.</div>
+    <div class="chn">F1分数是不平衡数据集的更好评估指标。</div>
+    <div class="word">score 分数</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use F1 and recall as evaluation <b>metric</b>s for text classification.</div>
+    <div class="chn">使用F1和召回率作为文本分类的评估指标。</div>
+    <div class="word">metric 指标</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">We need to <b>optimize</b> the model to reduce inference time.</div>
+    <div class="chn">我们需要优化模型以减少推理时间。</div>
+    <div class="word">optimize 优化</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Adam is a popular <b>optimizer</b> for training LLMs.</div>
+    <div class="chn">Adam是训练大语言模型的常用优化器。</div>
+    <div class="word">optimizer 优化器</div>
+    <div class="term-tag">优化器：更新模型权重的算法，如Adam、SGD</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>learning rate</b> scheduler reduces LR as training progresses.</div>
+    <div class="chn">学习率调度器随着训练推进降低学习率。</div>
+    <div class="word">learning rate 学习率</div>
+    <div class="term-tag">学习率：控制权重更新幅度，过大震荡，过小收敛慢</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Gradient</b> descent is the core algorithm for model training.</div>
+    <div class="chn">梯度下降是模型训练的核心算法。</div>
+    <div class="word">gradient 梯度</div>
+    <div class="term-tag">梯度：损失函数对权重的导数，指引权重更新方向</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Update model <b>weight</b>s using gradients calculated from loss.</div>
+    <div class="chn">使用从损失计算出的梯度更新模型权重。</div>
+    <div class="word">update 更新</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The model will <b>converge</b> when loss stops decreasing.</div>
+    <div class="chn">当损失不再下降时，模型就会收敛。</div>
+    <div class="word">converge 收敛</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The model may <b>overfit</b> if trained on too small a dataset.</div>
+    <div class="chn">如果在过小的数据集上训练，模型可能过拟合。</div>
+    <div class="word">overfit 过拟合</div>
+    <div class="term-tag">过拟合：模型在训练集表现好，测试集表现差</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">A model with too few parameters may <b>underfit</b> the data.</div>
+    <div class="chn">参数过少的模型可能对数据欠拟合。</div>
+    <div class="word">underfit 欠拟合</div>
+    <div class="term-tag">欠拟合：模型复杂度不足，无法捕捉数据规律</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Validate</b> the model on a separate validation dataset.</div>
+    <div class="chn">在独立的验证数据集上验证模型。</div>
+    <div class="word">validate 验证</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Evaluation</b> report includes accuracy, recall and F1 score.</div>
+    <div class="chn">评估报告包含精度、召回率和F1分数。</div>
+    <div class="word">evaluation 评估</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Classification</b> task predicts the category of input text.</div>
+    <div class="chn">分类任务预测输入文本的类别。</div>
+    <div class="word">classification 分类</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Regression</b> task predicts a continuous numerical value.</div>
+    <div class="chn">回归任务预测连续的数值。</div>
+    <div class="word">regression 回归</div>
+  </div>
 
-            <!-- 大数据 + AI 交叉 -->
-            <div>
-                <h3 class="text-lg font-semibold text-primary mb-2">5）大数据 + AI 交叉（20）</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
-                    <div class="word-item"><span class="word-eng">ETL</span><span class="word-cn">抽取转换加载</span></div>
-                    <div class="word-item"><span class="word-eng">stream</span><span class="word-cn">流</span></div>
-                    <div class="word-item"><span class="word-eng">warehouse</span><span class="word-cn">数仓</span></div>
-                    <div class="word-item"><span class="word-eng">lake</span><span class="word-cn">湖仓</span></div>
-                    <div class="word-item"><span class="word-eng">schema</span><span class="word-cn">表结构</span></div>
-                    <div class="word-item"><span class="word-eng">table</span><span class="word-cn">表</span></div>
-                    <div class="word-item"><span class="word-eng">column</span><span class="word-cn">列</span></div>
-                    <div class="word-item"><span class="word-eng">row</span><span class="word-cn">行</span></div>
-                    <div class="word-item"><span class="word-eng">join</span><span class="word-cn">关联</span></div>
-                    <div class="word-item"><span class="word-eng">filter</span><span class="word-cn">过滤</span></div>
-                    <div class="word-item"><span class="word-eng">aggregate</span><span class="word-cn">聚合</span></div>
-                    <div class="word-item"><span class="word-eng">index</span><span class="word-cn">索引</span></div>
-                    <div class="word-item"><span class="word-eng">partition</span><span class="word-cn">分区</span></div>
-                    <div class="word-item"><span class="word-eng">shuffle</span><span class="word-cn">洗牌</span></div>
-                    <div class="word-item"><span class="word-eng">sink</span><span class="word-cn">输出</span></div>
-                    <div class="word-item"><span class="word-eng">source</span><span class="word-cn">源</span></div>
-                    <div class="word-item"><span class="word-eng">real-time</span><span class="word-cn">实时</span></div>
-                    <div class="word-item"><span class="word-eng">offline</span><span class="word-cn">离线</span></div>
-                    <div class="word-item"><span class="word-eng">pipeline</span><span class="word-cn">流水线</span></div>
-                    <div class="word-item"><span class="word-eng">feature</span><span class="word-cn">特征</span></div>
-                </div>
-            </div>
-        </div>
+  <!-- ========== 部署 & 工程（20句） ========== -->
+  <div class="sentence-card">
+    <div class="eng"><b>Deploy</b> the LLM as a REST API using FastAPI.</div>
+    <div class="chn">使用FastAPI将大语言模型部署为REST API。</div>
+    <div class="word">deploy 部署</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The inference <b>service</b> handles 1000 requests per second.</div>
+    <div class="chn">推理服务每秒处理1000个请求。</div>
+    <div class="word">service 服务</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Call the <b>API</b> endpoint to get text generation results.</div>
+    <div class="chn">调用API端点获取文本生成结果。</div>
+    <div class="word">API 接口</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Define an <b>endpoint</b> "/generate" for text generation.</div>
+    <div class="chn">为文本生成定义一个端点"/generate"。</div>
+    <div class="word">endpoint 端点</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>server</b> is deployed on a cloud machine with 8 A100 GPUs.</div>
+    <div class="chn">服务器部署在配备8块A100 GPU的云主机上。</div>
+    <div class="word">server 服务器</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>client</b> sends JSON requests to the inference server.</div>
+    <div class="chn">客户端向推理服务器发送JSON请求。</div>
+    <div class="word">client 客户端</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Each <b>request</b> contains a prompt and max token limit.</div>
+    <div class="chn">每个请求包含一个提示词和最大令牌限制。</div>
+    <div class="word">request 请求</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>response</b> returns generated text and token usage.</div>
+    <div class="chn">响应返回生成的文本和令牌使用量。</div>
+    <div class="word">response 响应</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Parallel</b> inference processes multiple requests at the same time.</div>
+    <div class="chn">并行推理同时处理多个请求。</div>
+    <div class="word">parallel 并行</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Distributed</b> training splits the model across multiple GPUs.</div>
+    <div class="chn">分布式训练将模型拆分到多个GPU上。</div>
+    <div class="word">distributed 分布式</div>
+    <div class="term-tag">分布式训练：用多卡/多机训练大模型，解决单卡显存不足问题</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>cluster</b> has 16 nodes with 8 GPUs each for model training.</div>
+    <div class="chn">这个集群有16个节点，每个节点8块GPU用于模型训练。</div>
+    <div class="word">cluster 集群</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Each <b>node</b> in the cluster communicates via high-speed network.</div>
+    <div class="chn">集群中的每个节点通过高速网络通信。</div>
+    <div class="word">node 节点</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Monitor <b>resource</b> usage (CPU/GPU/memory) of the inference service.</div>
+    <div class="chn">监控推理服务的资源使用情况（CPU/GPU/内存）。</div>
+    <div class="word">resource 资源</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The model uses 20GB of GPU <b>memory</b> during inference.</div>
+    <div class="chn">模型推理时占用20GB GPU内存。</div>
+    <div class="word">memory 内存</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>GPU</b> acceleration is essential for LLM training and inference.</div>
+    <div class="chn">GPU加速对大语言模型的训练和推理至关重要。</div>
+    <div class="word">GPU 显卡</div>
+    <div class="term-tag">GPU：图形处理器，并行计算能力强，是LLM训练/推理的核心硬件</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>CPU</b> is used for data preprocessing and service management.</div>
+    <div class="chn">CPU用于数据预处理和服务管理。</div>
+    <div class="word">CPU 处理器</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Reduce <b>latency</b> to less than 100ms for real-time applications.</div>
+    <div class="chn">将延迟降低到100毫秒以下以适配实时应用。</div>
+    <div class="word">latency 延迟</div>
+    <div class="term-tag">延迟：从发送请求到收到响应的时间，越低用户体验越好</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Improve <b>throughput</b> by batching multiple inference requests.</div>
+    <div class="chn">通过批量处理多个推理请求提升吞吐量。</div>
+    <div class="word">throughput 吞吐量</div>
+    <div class="term-tag">吞吐量：单位时间处理的请求数，越高服务效率越高</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>cache</b> to store frequent prompt embeddings for faster inference.</div>
+    <div class="chn">使用缓存存储高频提示词嵌入以加快推理速度。</div>
+    <div class="word">cache 缓存</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Optimize <b>performance</b> by reducing model parameters and using quantization.</div>
+    <div class="chn">通过减少模型参数和使用量化优化性能。</div>
+    <div class="word">performance 性能</div>
+  </div>
 
-        <!-- 每日计划区域 -->
-        <div class="card">
-            <h2 class="section-title">
-                <i class="fa fa-calendar-check-o"></i> 每日学习计划（25分钟）
-            </h2>
-            <div class="space-y-4">
-                <div class="plan-item">
-                    <i class="fa fa-clock-o plan-icon"></i>
-                    <div>
-                        <strong class="text-primary">1）背单词 10分钟</strong>
-                        <p class="text-secondary text-sm mt-1">每天10个词，只记「英文→中文技术含义」，不用拼写、不用读音</p>
-                    </div>
-                </div>
-                <div class="plan-item">
-                    <i class="fa fa-file-text-o plan-icon"></i>
-                    <div>
-                        <strong class="text-primary">2）读英文文档 10分钟</strong>
-                        <p class="text-secondary text-sm mt-1">材料：GitHub README → Hugging Face 文档 → 技术博客；不会的词立刻查，读懂大意即可</p>
-                    </div>
-                </div>
-                <div class="plan-item">
-                    <i class="fa fa-code plan-icon"></i>
-                    <div>
-                        <strong class="text-primary">3）看代码注释 5分钟</strong>
-                        <p class="text-secondary text-sm mt-1">打开PyTorch/LLM项目，看英文注释→想中文含义，强化技术英语记忆</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- ========== 大数据+AI交叉（20句） ========== -->
+  <div class="sentence-card">
+    <div class="eng"><b>ETL</b> process extracts, transforms and loads data into data warehouse.</div>
+    <div class="chn">ETL流程抽取、转换并加载数据到数据仓库。</div>
+    <div class="word">ETL 抽取转换加载</div>
+    <div class="term-tag">ETL：大数据核心流程，为LLM准备高质量训练数据</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Stream</b> processing handles real-time data for LLM inference.</div>
+    <div class="chn">流处理为大模型推理处理实时数据。</div>
+    <div class="word">stream 流</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Store structured data in a <b>warehouse</b> and unstructured data in a data lake.</div>
+    <div class="chn">结构化数据存储在数仓，非结构化数据存储在数据湖。</div>
+    <div class="word">warehouse 数仓</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Data <b>lake</b> stores raw data in its original format for LLM training.</div>
+    <div class="chn">数据湖以原始格式存储数据用于大模型训练。</div>
+    <div class="word">lake 湖仓</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Define the <b>schema</b> of the dataset table for data validation.</div>
+    <div class="chn">定义数据集表的结构用于数据验证。</div>
+    <div class="word">schema 表结构</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The <b>table</b> contains user ID, text content and label columns.</div>
+    <div class="chn">这个表包含用户ID、文本内容和标签列。</div>
+    <div class="word">table 表</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The "text" <b>column</b> stores raw text data for model training.</div>
+    <div class="chn">"text"列存储用于模型训练的原始文本数据。</div>
+    <div class="word">column 列</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Each <b>row</b> in the table represents one training sample.</div>
+    <div class="chn">表中的每一行代表一个训练样本。</div>
+    <div class="word">row 行</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Join</b> user table and text table on user ID for data enrichment.</div>
+    <div class="chn">按用户ID关联用户表和文本表以丰富数据。</div>
+    <div class="word">join 关联</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Filter</b> out low-quality text with less than 10 tokens.</div>
+    <div class="chn">过滤掉令牌数少于10的低质量文本。</div>
+    <div class="word">filter 过滤</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Aggregate</b> training data by month to analyze model performance trends.</div>
+    <div class="chn">按月份聚合训练数据以分析模型性能趋势。</div>
+    <div class="word">aggregate 聚合</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Create an <b>index</b> on the "user_id" column to speed up queries.</div>
+    <div class="chn">在"user_id"列上创建索引以加快查询速度。</div>
+    <div class="word">index 索引</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Partition</b> the dataset by date to reduce query time.</div>
+    <div class="chn">按日期分区数据集以减少查询时间。</div>
+    <div class="word">partition 分区</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Shuffle</b> training data to avoid order bias during training.</div>
+    <div class="chn">洗牌训练数据以避免训练时的顺序偏差。</div>
+    <div class="word">shuffle 洗牌</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The data <b>sink</b> writes processed data to a Parquet file.</div>
+    <div class="chn">数据输出端将处理后的数据写入Parquet文件。</div>
+    <div class="word">sink 输出</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">The data <b>source</b> reads raw text from Kafka topics.</div>
+    <div class="chn">数据源从Kafka主题读取原始文本。</div>
+    <div class="word">source 源</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Real-time</b> data processing provides up-to-date context for LLM.</div>
+    <div class="chn">实时数据处理为大模型提供最新上下文。</div>
+    <div class="word">real-time 实时</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>Offline</b> training uses historical data to train the model.</div>
+    <div class="chn">离线训练使用历史数据训练模型。</div>
+    <div class="word">offline 离线</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Build a data <b>pipeline</b> for cleaning and tokenizing text data.</div>
+    <div class="chn">构建数据流水线用于清洗和分词文本数据。</div>
+    <div class="word">pipeline 流水线</div>
+    <div class="term-tag">数据流水线：自动化处理数据的流程，是大数据和LLM的核心衔接环节</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Extract semantic <b>feature</b>s from text using BERT model.</div>
+    <div class="chn">使用BERT模型从文本中提取语义特征。</div>
+    <div class="word">feature 特征</div>
+  </div>
 
-        <!-- 工具流区域 -->
-        <div class="card">
-            <h2 class="section-title">
-                <i class="fa fa-wrench"></i> 必备工具流
-            </h2>
-            <div class="space-y-3">
-                <div class="plan-item">
-                    <i class="fa fa-chrome plan-icon"></i>
-                    <div>
-                        <strong class="text-primary">沉浸式翻译（Chrome插件）</strong>
-                        <p class="text-secondary text-sm mt-1">看英文文档时，左边英文、右边中文，无缝对照</p>
-                    </div>
-                </div>
-                <div class="plan-item">
-                    <i class="fa fa-book plan-icon"></i>
-                    <div>
-                        <strong class="text-primary">欧路词典/有道词典</strong>
-                        <p class="text-secondary text-sm mt-1">鼠标取词，即指即译，快速查技术词汇</p>
-                    </div>
-                </div>
-                <div class="plan-item">
-                    <i class="fa fa-link plan-icon"></i>
-                    <div>
-                        <strong class="text-primary">推荐阅读材料</strong>
-                        <p class="text-secondary text-sm mt-1">1. Hugging Face Docs | 2. PyTorch Docs | 3. GitHub awesome-llm</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 目标区域 -->
-        <div class="card">
-            <h2 class="section-title">
-                <i class="fa fa-bullseye"></i> 10天小目标
-            </h2>
-            <ul class="list-disc list-inside text-secondary space-y-2">
-                <li>看懂大模型文档标题、摘要</li>
-                <li>看懂GitHub项目介绍</li>
-                <li>看懂训练/推理代码注释</li>
-                <li>遇到生词能自己查明白</li>
-            </ul>
-            <div class="mt-4 p-4 bg-accent/10 rounded-lg text-center">
-                <p class="text-primary font-medium">达到以上目标，即可开始学习大模型核心内容！</p>
-            </div>
-        </div>
-
-        <!-- 底部提示 -->
-        <div class="mt-8 text-center text-secondary text-sm">
-            <p>最后更新：2026-03-04</p>
-            <p class="mt-1"><i class="fa fa-pencil"></i> 可直接在HTML中新增词汇/调整计划</p>
-        </div>
-    </main>
-
-    <!-- 页脚 -->
-    <footer class="mt-16 bg-primary text-white py-4 text-center text-sm">
-        <p>© 2026 大数据工程师转大模型 | 技术英语提升计划</p>
-    </footer>
+  <!-- ========== PyTorch专属（5句） ========== -->
+  <div class="sentence-card">
+    <div class="eng"><b>PyTorch</b> is a popular framework for building and training LLMs.</div>
+    <div class="chn">PyTorch是构建和训练大语言模型的主流框架。</div>
+    <div class="word">PyTorch 深度学习框架</div>
+    <div class="term-tag">PyTorch：Facebook推出的动态图深度学习框架，LLM开发首选</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>PyTorch</b> Tensor to store model inputs and outputs.</div>
+    <div class="chn">使用PyTorch张量存储模型输入和输出。</div>
+    <div class="word">Tensor 张量</div>
+    <div class="term-tag">Tensor：PyTorch的核心数据结构，多维数组</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng"><b>PyTorch</b> DataLoader loads data in batches for model training.</div>
+    <div class="chn">PyTorch DataLoader批量加载数据用于模型训练。</div>
+    <div class="word">DataLoader 数据加载器</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>PyTorch</b> Lightning to simplify LLM training code.</div>
+    <div class="chn">使用PyTorch Lightning简化大模型训练代码。</div>
+    <div class="word">PyTorch Lightning 轻量化训练框架</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Convert <b>PyTorch</b> model to ONNX format for deployment.</div>
+    <div class="chn">将PyTorch模型转换为ONNX格式以便部署。</div>
+    <div class="word">ONNX 模型交换格式</div>
+  </div>
+</div>
 </body>
 </html>
