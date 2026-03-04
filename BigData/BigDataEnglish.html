@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.9">
+<title>大数据英语 - 单词+例句+组件常识 | boxz</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { primary:'#2D3748', accent:'#4299e1', light:'#F7FAFC' }
+  }}
+}
+</script>
+<style type="text/tailwindcss">
+@layer utilities {
+  .container-box { @apply max-w-3xl mx-auto px-4 py-10 }
+  .sentence-card { @apply bg-white rounded-xl p-5 mb-4 shadow hover:shadow-md transition }
+  .eng { @apply text-primary font-medium mb-1 }
+  .chn { @apply text-gray-600 text-sm mb-2 }
+  .word { @apply inline-block px-2 py-0.5 rounded bg-accent/10 text-accent text-sm mr-1 mb-1 }
+  .term-tag { @apply inline-block px-2 py-1 rounded bg-green-100 text-green-700 text-xs ml-2 }
+}
+</style>
+</head>
+
+<body class="bg-light">
+<div class="container-box">
+  <h1 class="text-2xl font-bold text-primary mb-6 flex items-center">
+    <i class="fa fa-database mr-2"></i>大数据英语 · 单词+例句+组件常识
+  </h1>
+
+  <!-- ========== MySQL（15句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">Execute <b>SELECT</b> query to retrieve data from MySQL table.</div>
+    <div class="chn">执行SELECT查询从MySQL表中检索数据。</div>
+    <div class="word">SELECT 查询</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Create an <b>index</b> on the "user_id" column to speed up MySQL queries.</div>
+    <div class="chn">在"user_id"列上创建索引以加快MySQL查询速度。</div>
+    <div class="word">index 索引</div>
+    <div class="term-tag">MySQL索引：B+树结构，提升查询效率，常用类型有主键索引、普通索引</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>JOIN</b> to combine data from multiple MySQL tables.</div>
+    <div class="chn">使用JOIN关联多个MySQL表的数据。</div>
+    <div class="word">JOIN 关联</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Optimize MySQL <b>query</b> by adding proper WHERE conditions.</div>
+    <div class="chn">通过添加合适的WHERE条件优化MySQL查询。</div>
+    <div class="word">query 查询</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Set <b>transaction</b> isolation level to READ COMMITTED in MySQL.</div>
+    <div class="chn">将MySQL的事务隔离级别设置为READ COMMITTED。</div>
+    <div class="word">transaction 事务</div>
+    <div class="term-tag">MySQL事务：ACID特性，保证数据操作的一致性和原子性</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Create a <b>partitioned</b> table in MySQL by date for large datasets.</div>
+    <div class="chn">在MySQL中按日期为大数据集创建分区表。</div>
+    <div class="word">partitioned 分区的</div>
+  </div>
+  <div class="eng">Use <b>EXPLAIN</b> to analyze the execution plan of MySQL query.</div>
+  <div class="chn">使用EXPLAIN分析MySQL查询的执行计划。</div>
+  <div class="word">EXPLAIN 执行计划分析</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Configure MySQL <b>buffer pool</b> size to improve performance.</div>
+    <div class="chn">配置MySQL缓冲池大小以提升性能。</div>
+    <div class="word">buffer pool 缓冲池</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Backup MySQL <b>database</b> using mysqldump tool daily.</div>
+    <div class="chn">每天使用mysqldump工具备份MySQL数据库。</div>
+    <div class="word">database 数据库</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Optimize MySQL <b>table</b> with OPTIMIZE TABLE command.</div>
+    <div class="chn">使用OPTIMIZE TABLE命令优化MySQL表。</div>
+    <div class="word">table 表</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>INSERT</b> ... ON DUPLICATE KEY UPDATE for MySQL upsert operation.</div>
+    <div class="chn">使用INSERT ... ON DUPLICATE KEY UPDATE实现MySQL的upsert操作。</div>
+    <div class="word">INSERT 插入</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Monitor MySQL <b>slow query</b> log to find inefficient queries.</div>
+    <div class="chn">监控MySQL慢查询日志以发现低效查询。</div>
+    <div class="word">slow query 慢查询</div>
+    <div class="term-tag">慢查询：执行时间超过long_query_time的SQL，默认10秒</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Create a <b>view</b> in MySQL to simplify complex query logic.</div>
+    <div class="chn">在MySQL中创建视图简化复杂的查询逻辑。</div>
+    <div class="word">view 视图</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>stored procedure</b> to encapsulate reusable MySQL logic.</div>
+    <div class="chn">使用存储过程封装可复用的MySQL逻辑。</div>
+    <div class="word">stored procedure 存储过程</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Configure MySQL <b>replication</b> for high availability.</div>
+    <div class="chn">配置MySQL主从复制以实现高可用。</div>
+    <div class="word">replication 复制</div>
+    <div class="term-tag">MySQL复制：主库写入，从库同步，提升读性能和容灾能力</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>COUNT()</b> aggregate function to count rows in MySQL table.</div>
+    <div class="chn">使用COUNT()聚合函数统计MySQL表的行数。</div>
+    <div class="word">aggregate function 聚合函数</div>
+  </div>
+
+  <!-- ========== Linux（10句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">Use <b>ssh</b> to connect to remote Linux server for data processing.</div>
+    <div class="chn">使用ssh连接到远程Linux服务器进行数据处理。</div>
+    <div class="word">ssh 安全外壳协议</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Check disk usage on Linux with <b>df -h</b> command.</div>
+    <div class="chn">使用df -h命令检查Linux的磁盘使用情况。</div>
+    <div class="word">df -h 磁盘空间查看</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Monitor Linux process with <b>top</b> or <b>htop</b> command.</div>
+    <div class="chn">使用top或htop命令监控Linux进程。</div>
+    <div class="word">top/htop 进程监控</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Create a shell <b>script</b> to automate Linux data backup.</div>
+    <div class="chn">创建shell脚本自动化Linux数据备份。</div>
+    <div class="word">script 脚本</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>chmod</b> to change file permissions in Linux system.</div>
+    <div class="chn">使用chmod修改Linux系统中的文件权限。</div>
+    <div class="word">chmod 权限修改</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Compress large files in Linux with <b>gzip</b> or <b>tar</b> command.</div>
+    <div class="chn">使用gzip或tar命令压缩Linux中的大文件。</div>
+    <div class="word">gzip/tar 压缩命令</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Check Linux system <b>log</b> with tail -f /var/log/messages.</div>
+    <div class="chn">使用tail -f /var/log/messages查看Linux系统日志。</div>
+    <div class="word">log 日志</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>scp</b> to transfer files between Linux servers securely.</div>
+    <div class="chn">使用scp在Linux服务器之间安全传输文件。</div>
+    <div class="word">scp 安全拷贝</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Configure Linux <b>cron</b> job to run data pipeline daily at 2 AM.</div>
+    <div class="chn">配置Linux cron任务在每天凌晨2点运行数据流水线。</div>
+    <div class="word">cron 定时任务</div>
+    <div class="term-tag">Linux cron：基于时间的任务调度器，大数据定时任务核心工具</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>ps -ef</b> to list all running processes in Linux.</div>
+    <div class="chn">使用ps -ef列出Linux中所有运行的进程。</div>
+    <div class="word">ps -ef 进程列表</div>
+  </div>
+
+  <!-- ========== Hive & HBase（15句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">Create an <b>external table</b> in Hive pointing to HDFS path.</div>
+    <div class="chn">在Hive中创建指向HDFS路径的外部表。</div>
+    <div class="word">external table 外部表</div>
+    <div class="term-tag">Hive外部表：表结构存储在Metastore，数据存储在HDFS，删除表不删数据</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>PARTITION BY</b> clause to partition Hive table by date.</div>
+    <div class="chn">使用PARTITION BY子句按日期分区Hive表。</div>
+    <div class="word">PARTITION BY 分区</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Optimize Hive query with <b>ORC</b> or <b>Parquet</b> file format.</div>
+    <div class="chn">使用ORC或Parquet文件格式优化Hive查询。</div>
+    <div class="word">ORC/Parquet 列式存储格式</div>
+    <div class="term-tag">列式存储：大幅提升大数据查询效率，Hive首选存储格式</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Create a <b>bucketed</b> Hive table for efficient join operations.</div>
+    <div class="chn">创建分桶Hive表以实现高效的关联操作。</div>
+    <div class="word">bucketed 分桶的</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>HiveQL</b> to analyze large datasets stored in HDFS.</div>
+    <div class="chn">使用HiveQL分析存储在HDFS中的大数据集。</div>
+    <div class="word">HiveQL Hive查询语言</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Set <b>hive.exec.dynamic.partition.mode</b> to nonstrict for dynamic partitioning.</div>
+    <div class="chn">将hive.exec.dynamic.partition.mode设置为nonstrict以启用动态分区。</div>
+    <div class="word">dynamic partitioning 动态分区</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>INSERT OVERWRITE</b> to write data to Hive partition.</div>
+    <div class="chn">使用INSERT OVERWRITE将数据写入Hive分区。</div>
+    <div class="word">INSERT OVERWRITE 覆盖写入</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Design HBase <b>table</b> with row key, column families and qualifiers.</div>
+    <div class="chn">设计包含行键、列族和列限定符的HBase表。</div>
+    <div class="word">table 表</div>
+    <div class="term-tag">HBase表：NoSQL列式存储，行键是唯一索引，列族是存储单元</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>row key</b> design to optimize HBase read/write performance.</div>
+    <div class="chn">通过行键设计优化HBase的读写性能。</div>
+    <div class="word">row key 行键</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Configure HBase <b>region</b> split policy for balanced data distribution.</div>
+    <div class="chn">配置HBase区域拆分策略以实现均衡的数据分布。</div>
+    <div class="word">region 区域</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>scan</b> or <b>get</b> operation to retrieve data from HBase.</div>
+    <div class="chn">使用scan或get操作从HBase检索数据。</div>
+    <div class="word">scan/get 扫描/获取</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Enable HBase <b>compaction</b> to optimize storage and performance.</div>
+    <div class="chn">启用HBase压缩以优化存储和性能。</div>
+    <div class="word">compaction 压缩</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Integrate Hive with HBase using <b>StorageHandler</b> for mixed queries.</div>
+    <div class="chn">使用StorageHandler集成Hive和HBase以实现混合查询。</div>
+    <div class="word">StorageHandler 存储处理器</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Set HBase <b>TTL</b> (Time To Live) for automatic data expiration.</div>
+    <div class="chn">设置HBase的TTL（存活时间）以实现数据自动过期。</div>
+    <div class="word">TTL 存活时间</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>bulk load</b> to import large datasets into HBase efficiently.</div>
+    <div class="chn">使用批量加载高效地将大数据集导入HBase。</div>
+    <div class="word">bulk load 批量加载</div>
+  </div>
+
+  <!-- ========== Kafka（10句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">Create a Kafka <b>topic</b> with 8 partitions and 3 replicas for real-time data.</div>
+    <div class="chn">创建一个8个分区、3个副本的Kafka主题用于实时数据传输。</div>
+    <div class="word">topic 主题</div>
+    <div class="term-tag">Kafka主题：消息分类单元，数据按主题生产和消费</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Kafka <b>producer</b> to send real-time data to Kafka cluster.</div>
+    <div class="chn">使用Kafka生产者将实时数据发送到Kafka集群。</div>
+    <div class="word">producer 生产者</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Configure Kafka <b>consumer group</b> for parallel message consumption.</div>
+    <div class="chn">配置Kafka消费者组以实现并行消息消费。</div>
+    <div class="word">consumer group 消费者组</div>
+    <div class="term-tag">消费者组：多个消费者协同消费一个主题，实现负载均衡</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Set Kafka <b>retention period</b> to 7 days for message storage.</div>
+    <div class="chn">将Kafka的消息保留期设置为7天。</div>
+    <div class="word">retention period 保留期</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Kafka <b>offset</b> to track consumed messages in consumer group.</div>
+    <div class="chn">使用Kafka偏移量跟踪消费者组中已消费的消息。</div>
+    <div class="word">offset 偏移量</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Enable Kafka <b>compression</b> to reduce network and storage overhead.</div>
+    <div class="chn">启用Kafka压缩以减少网络和存储开销。</div>
+    <div class="word">compression 压缩</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Monitor Kafka <b>broker</b> health and performance with Kafka Manager.</div>
+    <div class="chn">使用Kafka Manager监控Kafka broker的健康状态和性能。</div>
+    <div class="word">broker 代理节点</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Kafka <b>connect</b> to integrate Kafka with external systems (MySQL/HDFS).</div>
+    <div class="chn">使用Kafka Connect将Kafka与外部系统（MySQL/HDFS）集成。</div>
+    <div class="word">connect 连接器</div>
+    <div class="term-tag">Kafka Connect：无代码集成工具，实现Kafka与外部系统的数据同步</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Handle Kafka <b>rebalance</b> to maintain consumer group stability.</div>
+    <div class="chn">处理Kafka重平衡以维持消费者组稳定性。</div>
+    <div class="word">rebalance 重平衡</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Kafka <b>Streams</b> API to process real-time data streams.</div>
+    <div class="chn">使用Kafka Streams API处理实时数据流。</div>
+    <div class="word">Streams 流处理</div>
+  </div>
+
+  <!-- ========== HDFS（8句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">Use <b>hdfs dfs -ls</b> command to list files in HDFS directory.</div>
+    <div class="chn">使用hdfs dfs -ls命令列出HDFS目录中的文件。</div>
+    <div class="word">hdfs dfs HDFS命令行</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Configure HDFS <b>replication factor</b> to 3 for data reliability.</div>
+    <div class="chn">将HDFS复制因子配置为3以保证数据可靠性。</div>
+    <div class="word">replication factor 复制因子</div>
+    <div class="term-tag">HDFS复制因子：默认3，数据块在集群中复制的份数，平衡可靠性和存储</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Upload local file to HDFS with <b>hdfs dfs -put</b> command.</div>
+    <div class="chn">使用hdfs dfs -put命令将本地文件上传到HDFS。</div>
+    <div class="word">put 上传</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Check HDFS <b>block size</b> (default 128MB) for large file optimization.</div>
+    <div class="chn">检查HDFS块大小（默认128MB）以优化大文件存储。</div>
+    <div class="word">block size 块大小</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>NameNode</b> and <b>DataNode</b> to manage HDFS cluster.</div>
+    <div class="chn">使用NameNode和DataNode管理HDFS集群。</div>
+    <div class="word">NameNode/DataNode 名称节点/数据节点</div>
+    <div class="term-tag">HDFS架构：NameNode管理元数据，DataNode存储实际数据块</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Run <b>hdfs fsck</b> to check HDFS file system consistency.</div>
+    <div class="chn">运行hdfs fsck检查HDFS文件系统一致性。</div>
+    <div class="word">fsck 文件系统检查</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Enable HDFS <b>HA</b> (High Availability) to avoid single point of failure.</div>
+    <div class="chn">启用HDFS高可用以避免单点故障。</div>
+    <div class="word">HA 高可用</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>DistCp</b> to copy large datasets between HDFS clusters.</div>
+    <div class="chn">使用DistCp在HDFS集群之间复制大数据集。</div>
+    <div class="word">DistCp 分布式拷贝</div>
+  </div>
+
+  <!-- ========== Spark & Flink（15句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">Create a Spark <b>DataFrame</b> from Hive table for data processing.</div>
+    <div class="chn">从Hive表创建Spark DataFrame进行数据处理。</div>
+    <div class="word">DataFrame 数据帧</div>
+    <div class="term-tag">Spark DataFrame：分布式数据集合，类似关系型数据库表，优化的计算结构</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Spark <b>RDD</b> (Resilient Distributed Dataset) for low-level operations.</div>
+    <div class="chn">使用Spark RDD（弹性分布式数据集）进行底层操作。</div>
+    <div class="word">RDD 弹性分布式数据集</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Configure Spark <b>executor memory</b> and <b>cores</b> for optimal performance.</div>
+    <div class="chn">配置Spark executor内存和核心数以获得最佳性能。</div>
+    <div class="word">executor memory/cores 执行器内存/核心</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Spark <b>SQL</b> to run SQL queries on distributed datasets.</div>
+    <div class="chn">使用Spark SQL在分布式数据集上运行SQL查询。</div>
+    <div class="word">Spark SQL SQL查询模块</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Implement Spark <b>Streaming</b> for real-time data processing from Kafka.</div>
+    <div class="chn">实现Spark Streaming处理来自Kafka的实时数据。</div>
+    <div class="word">Streaming 流处理</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Spark <b>join</b> to combine multiple DataFrames efficiently.</div>
+    <div class="chn">使用Spark join高效合并多个DataFrame。</div>
+    <div class="word">join 关联</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Optimize Spark job with <b>cache</b> or <b>persist</b> for repeated DataFrame access.</div>
+    <div class="chn">使用cache或persist优化Spark作业，加速重复的DataFrame访问。</div>
+    <div class="word">cache/persist 缓存</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Flink <b>DataStream API</b> for low-latency real-time processing.</div>
+    <div class="chn">使用Flink DataStream API实现低延迟的实时处理。</div>
+    <div class="word">DataStream API 数据流API</div>
+    <div class="term-tag">Flink DataStream：面向流的API，毫秒级延迟，实时处理首选</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Configure Flink <b>checkpoint</b> to ensure exactly-once processing.</div>
+    <div class="chn">配置Flink检查点以实现精确一次处理语义。</div>
+    <div class="word">checkpoint 检查点</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Flink <b>Table API/SQL</b> for unified batch and stream processing.</div>
+    <div class="chn">使用Flink Table API/SQL实现批流统一处理。</div>
+    <div class="word">Table API/SQL 表API/SQL</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Set Flink <b>state backend</b> to RocksDB for large state management.</div>
+    <div class="chn">将Flink状态后端设置为RocksDB以管理大状态数据。</div>
+    <div class="word">state backend 状态后端</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Implement Flink <b>window</b> function to aggregate real-time data.</div>
+    <div class="chn">实现Flink窗口函数聚合实时数据。</div>
+    <div class="word">window 窗口</div>
+    <div class="term-tag">Flink窗口：滚动窗口、滑动窗口、会话窗口，实时聚合核心</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Deploy Spark application on <b>YARN</b> cluster for resource management.</div>
+    <div class="chn">在YARN集群上部署Spark应用以实现资源管理。</div>
+    <div class="word">YARN 资源调度框架</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Spark <b>UDF</b> (User Defined Function) to extend data processing logic.</div>
+    <div class="chn">使用Spark UDF（用户自定义函数）扩展数据处理逻辑。</div>
+    <div class="word">UDF 用户自定义函数</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Flink <b>CEP</b> (Complex Event Processing) to detect event patterns.</div>
+    <div class="chn">使用Flink CEP（复杂事件处理）检测事件模式。</div>
+    <div class="word">CEP 复杂事件处理</div>
+  </div>
+
+  <!-- ========== 数据仓库 & DataWorks & MaxCompute（12句） ========== -->
+  <div class="sentence-card">
+    <div class="eng">Design data warehouse with <b>ODS</b>, <b>DWD</b>, <b>DWS</b> and <b>ADS</b> layers.</div>
+    <div class="chn">设计包含ODS、DWD、DWS、ADS层的数据仓库。</div>
+    <div class="word">ODS/DWD/DWS/ADS 数仓分层</div>
+    <div class="term-tag">数仓分层：ODS(原始层)→DWD(明细层)→DWS(汇总层)→ADS(应用层)</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Implement <b>star schema</b> or <b>snowflake schema</b> for data warehouse modeling.</div>
+    <div class="chn">实现星型模型或雪花模型进行数据仓库建模。</div>
+    <div class="word">star/snowflake schema 星型/雪花模型</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use <b>ETL</b> (Extract, Transform, Load) to populate data warehouse.</div>
+    <div class="chn">使用ETL（抽取、转换、加载）填充数据仓库。</div>
+    <div class="word">ETL 抽取转换加载</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Implement <b>ELT</b> (Extract, Load, Transform) for cloud data warehouse.</div>
+    <div class="chn">为云数据仓库实现ELT（抽取、加载、转换）。</div>
+    <div class="word">ELT 抽取加载转换</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Create <b>dimension table</b> and <b>fact table</b> for data warehouse modeling.</div>
+    <div class="chn">创建维度表和事实表进行数据仓库建模。</div>
+    <div class="word">dimension/fact table 维度表/事实表</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use Alibaba <b>DataWorks</b> to orchestrate big data ETL pipelines.</div>
+    <div class="chn">使用阿里云DataWorks编排大数据ETL流水线。</div>
+    <div class="word">DataWorks 数据开发平台</div>
+    <div class="term-tag">DataWorks：阿里云一站式大数据开发平台，支持任务调度、数据开发</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Configure DataWorks <b>workflow</b> to run daily ETL jobs sequentially.</div>
+    <div class="chn">配置DataWorks工作流按顺序运行每日ETL任务。</div>
+    <div class="word">workflow 工作流</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use DataWorks <b>data integration</b> to sync data from MySQL to MaxCompute.</div>
+    <div class="chn">使用DataWorks数据集成将数据从MySQL同步到MaxCompute。</div>
+    <div class="word">data integration 数据集成</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Submit SQL jobs to <b>MaxCompute</b> (ODPS) for large-scale data processing.</div>
+    <div class="chn">向MaxCompute（ODPS）提交SQL作业进行大规模数据处理。</div>
+    <div class="word">MaxCompute 云数仓</div>
+    <div class="term-tag">MaxCompute：阿里云分布式数仓，支持PB级数据处理</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Create <b>external table</b> in MaxCompute to access OSS data directly.</div>
+    <div class="chn">在MaxCompute中创建外部表直接访问OSS数据。</div>
+    <div class="word">external table 外部表</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Use MaxCompute <b>UDF</b> to extend SQL capabilities for custom logic.</div>
+    <div class="chn">使用MaxCompute UDF扩展SQL能力以实现自定义逻辑。</div>
+    <div class="word">UDF 用户自定义函数</div>
+  </div>
+  <div class="sentence-card">
+    <div class="eng">Monitor MaxCompute <b>task</b> execution and optimize resource allocation.</div>
+    <div class="chn">监控MaxCompute任务执行并优化资源分配。</div>
+    <div class="word">task 任务</div>
+  </div>
+</div>
+</body>
+</html>
