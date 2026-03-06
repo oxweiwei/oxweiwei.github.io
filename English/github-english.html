@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.9">
+<title>GitHub英语 - 单词+场景语句 | boxz</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { primary:'#171515', accent:'#2ea44f', light:'#f8f8f8' }
+  }}
+}
+</script>
+<style type="text/tailwindcss">
+@layer utilities {
+  .container-box { @apply max-w-3xl mx-auto px-4 py-10 }
+  .sentence-card { @apply bg-white rounded-xl p-5 mb-4 shadow hover:shadow-md transition }
+  .eng { @apply text-primary font-medium mb-1 }
+  .chn { @apply text-gray-600 text-sm mb-2 }
+  .word { @apply inline-block px-2 py-0.5 rounded bg-accent/10 text-accent text-sm mr-1 mb-1 }
+  .tag { @apply inline-block px-2 py-1 rounded bg-blue-100 text-blue-700 text-xs ml-2 }
+}
+</style>
+</head>
+
+<body class="bg-light">
+<div class="container-box">
+  <h1 class="text-2xl font-bold text-primary mb-6 flex items-center">
+    <i class="fa fa-github mr-2"></i>GitHub英语 · 单词+场景语句
+  </h1>
+
+  <!-- ========== 核心基础词汇（仓库/账号） ========== -->
+  <h2 class="text-xl font-semibold mb-4 text-primary"><i class="fa fa-folder-open-o mr-2"></i>核心基础词汇</h2>
+  
+  <div class="sentence-card">
+    <div class="eng">Create a new <b>repository</b> for the project.</div>
+    <div class="chn">为项目创建一个新仓库。</div>
+    <div class="word">repository (repo) 仓库</div>
+    <div class="tag">场景：初始化项目第一步</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Clone</b> this repo to your local machine.</div>
+    <div class="chn">将这个仓库克隆到本地机器。</div>
+    <div class="word">Clone 克隆</div>
+    <div class="tag">指令：git clone [仓库地址]</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Fork</b> the repository to your own GitHub account.</div>
+    <div class="chn">将仓库复刻到自己的GitHub账号。</div>
+    <div class="word">Fork 复刻/派生</div>
+    <div class="tag">场景：贡献开源项目第一步</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Star</b> this repo if you find it useful.</div>
+    <div class="chn">如果你觉得有用，给这个仓库点星标。</div>
+    <div class="word">Star 收藏/星标</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Watch</b> the repo to get notifications of updates.</div>
+    <div class="chn">关注仓库以接收更新通知。</div>
+    <div class="word">Watch 关注/监控</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Create a new <b>branch</b> for the new feature.</div>
+    <div class="chn">为新功能创建一个新分支。</div>
+    <div class="word">Branch 分支</div>
+    <div class="tag">指令：git checkout -b [分支名]</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Make a <b>commit</b> with a clear message.</div>
+    <div class="chn">提交代码并填写清晰的提交信息。</div>
+    <div class="word">Commit 提交（代码）</div>
+    <div class="tag">指令：git commit -m "feat: add login function"</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Push</b> your local changes to the remote repo.</div>
+    <div class="chn">将本地修改推送到远程仓库。</div>
+    <div class="word">Push 推送</div>
+    <div class="tag">指令：git push origin [分支名]</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Pull</b> the latest code from the main branch.</div>
+    <div class="chn">从主分支拉取最新代码。</div>
+    <div class="word">Pull 拉取</div>
+    <div class="tag">指令：git pull origin main</div>
+  </div>
+
+  <!-- ========== 协作开发（Issue/PR/Review） ========== -->
+  <h2 class="text-xl font-semibold mb-4 text-primary mt-8"><i class="fa fa-users mr-2"></i>协作开发</h2>
+  
+  <div class="sentence-card">
+    <div class="eng">Open an <b>issue</b> to report a bug.</div>
+    <div class="chn">新建Issue反馈一个bug。</div>
+    <div class="word">Issue 问题/工单</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Create a <b>pull request (PR)</b> to merge your branch into main.</div>
+    <div class="chn">创建PR将你的分支合并到主分支。</div>
+    <div class="word">Pull Request (PR) 合并请求</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Review</b> the code changes in the PR.</div>
+    <div class="chn">审核PR中的代码修改。</div>
+    <div class="word">Review 审核（代码）</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Merge</b> the feature branch into the main branch.</div>
+    <div class="chn">将功能分支合并到主分支。</div>
+    <div class="word">Merge 合并（分支）</div>
+    <div class="tag">场景：PR审核通过后执行</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Resolve the merge <b>conflict</b> before merging.</div>
+    <div class="chn">合并前解决代码冲突。</div>
+    <div class="word">Conflict 冲突（代码）</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Leave a <b>comment</b> on the PR to ask questions.</div>
+    <div class="chn">在PR下留言提问。</div>
+    <div class="word">Comment 评论/备注</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Approve the PR if the code is correct.</div>
+    <div class="chn">代码无误则批准这个PR。</div>
+    <div class="word">Approve 批准</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Address the comments in the PR.</div>
+    <div class="chn">处理PR中的审核意见。</div>
+    <div class="word">Address 处理/解决</div>
+  </div>
+
+  <!-- ========== 代码管理（提交/版本/标签） ========== -->
+  <h2 class="text-xl font-semibold mb-4 text-primary mt-8"><i class="fa fa-code-fork mr-2"></i>代码管理</h2>
+  
+  <div class="sentence-card">
+    <div class="eng">Write a meaningful <b>commit message</b>.</div>
+    <div class="chn">编写有意义的提交信息。</div>
+    <div class="word">Commit message 提交信息</div>
+    <div class="tag">规范：feat/fix/docs/style/refactor/test/chore</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Revert</b> the last commit to undo the changes.</div>
+    <div class="chn">回滚上一次提交以撤销修改。</div>
+    <div class="word">Revert 回滚（提交）</div>
+    <div class="tag">指令：git revert [commit-hash]</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Create a <b>tag</b> for the v1.0 release.</div>
+    <div class="chn">为v1.0版本创建标签。</div>
+    <div class="word">Tag 标签（版本）</div>
+    <div class="tag">指令：git tag -a v1.0 -m "Release v1.0"</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Create a new <b>release</b> from the v1.2 tag.</div>
+    <div class="chn">基于v1.2标签创建新版本发布。</div>
+    <div class="word">Release 发布（版本）</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Fetch</b> the repo before pulling to avoid conflicts.</div>
+    <div class="chn">拉取前先抓取仓库以避免冲突。</div>
+    <div class="word">Fetch 抓取（远程更新）</div>
+    <div class="tag">指令：git fetch origin</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng"><b>Checkout</b> the main branch to test the code.</div>
+    <div class="chn">切换到主分支测试代码。</div>
+    <div class="word">Checkout 切换（分支）</div>
+    <div class="tag">指令：git checkout main</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Delete the feature branch after merging.</div>
+    <div class="chn">合并后删除功能分支。</div>
+    <div class="word">Delete 删除（分支）</div>
+    <div class="tag">指令：git branch -d [分支名]（本地）| git push origin --delete [分支名]（远程）</div>
+  </div>
+
+  <div class="sentence-card">
+    <div class="eng">Sync your fork with the original repository.</div>
+    <div class="chn">将你的复刻仓库与原仓库同步。</div>
+    <div class="word">Sync fork 同步复刻仓库</div>
+  </div>
+
+</div>
+</body>
+</html>
