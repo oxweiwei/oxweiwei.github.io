@@ -66,7 +66,7 @@
             font-size: 0.9em;
             margin-left: 5px;
         }
-        .example {
+        .sent {
             color: #7f8c8d;
             font-size: 0.95em;
             margin-left: 15px;
@@ -76,371 +76,491 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>英语学习资料 - 分类汇总</h1>
+<div class="container">
+    <h1>英语学习资料 - 分类汇总</h1>
+    <!-- 序数词、时间、单位、计算机单位、钱、天气、交通、办公用品、会议、职场高频短语 -->
 
-        <!-- 序数词 -->
-        <div class="category">
-            <h2>一、序数词 (Ordinal Numbers)</h2>
-            <ul>
-                <li><span class="word">1st</span> first (第一)
-                    <span class="example">Today is the 1st day of the month. (今天是这个月的第一天)</span>
-                </li>
-                <li><span class="word">2nd</span> second (第二)
-                    <span class="example">He is the 2nd person to arrive. (他是第二个到的人)</span>
-                </li>
-                <li><span class="word">3rd</span> third (第三)
-                    <span class="example">March is the 3rd month of the year. (三月是一年中的第三个月)</span>
-                </li>
-                <li><span class="word">4th</span> fourth (第四)
-                    <span class="example">Thursday is the 4th day of the week. (周四是一周的第四天)</span>
-                </li>
-                <li><span class="word">5th</span> fifth (第五)
-                    <span class="example">May is the 5th month of the year. (五月是一年中的第五个月)</span>
-                </li>
-                <li><span class="word">10th</span> tenth (第十)
-                    <span class="example">October is the 10th month of the year. (十月是一年中的第十个月)</span>
-                </li>
-                <li><span class="word">20th</span> twentieth (第二十)
-                    <span class="example">This is my 20th year of working. (这是我工作的第二十个年头)</span>
-                </li>
-                <li><span class="word">21st</span> twenty-first (第二十一)
-                    <span class="example">The 21st of June is Children's Day. (6月21日是儿童节)</span>
-                </li>
-                <li><span class="word">100th</span> hundredth (第一百)
-                    <span class="example">This is the 100th task we completed. (这是我们完成的第一百个任务)</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- 时间相关 -->
-        <div class="category">
-            <h2>二、时间相关 (Time Related)</h2>
-            
-            <h3>2.1 基础时间单位</h3>
-            <ul>
-                <li><span class="word">second</span> 秒
-                    <span class="example">The task takes 10 seconds to finish. (这个任务需要10秒完成)</span>
-                </li>
-                <li><span class="word">minute</span> 分钟
-                    <span class="example">Please wait for 5 minutes. (请等待5分钟)</span>
-                </li>
-                <li><span class="word">hour</span> 小时
-                    <span class="example">I work 8 hours a day. (我一天工作8小时)</span>
-                </li>
-                <li><span class="word">day</span> 天
-                    <span class="example">We need 3 days to complete the project. (我们需要3天完成这个项目)</span>
-                </li>
-                <li><span class="word">week</span> 周 <span class="abbr">(wk)</span>
-                    <span class="example">We have a meeting once a week. (我们每周开一次会)</span>
-                </li>
-                <li><span class="word">month</span> 月 <span class="abbr">(mo)</span>
-                    <span class="example">The report is due next month. (这份报告下个月截止)</span>
-                </li>
-                <li><span class="word">year</span> 年 <span class="abbr">(yr)</span>
-                    <span class="example">The company was founded in 2020. (这家公司成立于2020年)</span>
-                </li>
-            </ul>
-
-            <h3>2.2 星期 (带缩写)</h3>
-            <ul>
-                <li><span class="word">Monday</span> 周一 <span class="abbr">(Mon.)</span>
-                    <span class="example">The weekly meeting is on Monday. (周会在周一召开)</span>
-                </li>
-                <li><span class="word">Tuesday</span> 周二 <span class="abbr">(Tue./Tues.)</span>
-                    <span class="example">I have a training on Tuesday. (我周二有培训)</span>
-                </li>
-                <li><span class="word">Wednesday</span> 周三 <span class="abbr">(Wed.)</span>
-                    <span class="example">We finish the task on Wednesday. (我们周三完成任务)</span>
-                </li>
-                <li><span class="word">Thursday</span> 周四 <span class="abbr">(Thu./Thur.)</span>
-                    <span class="example">The deadline is Thursday afternoon. (截止日期是周四下午)</span>
-                </li>
-                <li><span class="word">Friday</span> 周五 <span class="abbr">(Fri.)</span>
-                    <span class="example">We have a team building on Friday. (我们周五有团建)</span>
-                </li>
-                <li><span class="word">Saturday</span> 周六 <span class="abbr">(Sat.)</span>
-                    <span class="example">I rest on Saturday. (我周六休息)</span>
-                </li>
-                <li><span class="word">Sunday</span> 周日 <span class="abbr">(Sun.)</span>
-                    <span class="example">The system maintenance is on Sunday. (系统维护在周日)</span>
-                </li>
-            </ul>
-
-            <h3>2.3 月份 (带缩写)</h3>
-            <ul>
-                <li><span class="word">January</span> 一月 <span class="abbr">(Jan.)</span>
-                    <span class="example">New Year is in January. (元旦在一月)</span>
-                </li>
-                <li><span class="word">February</span> 二月 <span class="abbr">(Feb.)</span>
-                    <span class="example">Valentine's Day is in February. (情人节在二月)</span>
-                </li>
-                <li><span class="word">March</span> 三月 <span class="abbr">(Mar.)</span>
-                    <span class="example">Women's Day is on March 8th. (妇女节在3月8日)</span>
-                </li>
-                <li><span class="word">April</span> 四月 <span class="abbr">(Apr.)</span>
-                    <span class="example">April Fool's Day is on April 1st. (愚人节在4月1日)</span>
-                </li>
-                <li><span class="word">May</span> 五月 <span class="abbr">(May)</span>
-                    <span class="example">Labor Day is on May 1st. (劳动节在5月1日)</span>
-                </li>
-                <li><span class="word">June</span> 六月 <span class="abbr">(Jun.)</span>
-                    <span class="example">Children's Day is on June 1st. (儿童节在6月1日)</span>
-                </li>
-                <li><span class="word">July</span> 七月 <span class="abbr">(Jul.)</span>
-                    <span class="example">It's very hot in July. (七月非常热)</span>
-                </li>
-                <li><span class="word">August</span> 八月 <span class="abbr">(Aug.)</span>
-                    <span class="example">We have a holiday in August. (我们八月有假期)</span>
-                </li>
-                <li><span class="word">September</span> 九月 <span class="abbr">(Sep./Sept.)</span>
-                    <span class="example">Teachers' Day is on September 10th. (教师节在9月10日)</span>
-                </li>
-                <li><span class="word">October</span> 十月 <span class="abbr">(Oct.)</span>
-                    <span class="example">National Day is on October 1st. (国庆节在10月1日)</span>
-                </li>
-                <li><span class="word">November</span> 十一月 <span class="abbr">(Nov.)</span>
-                    <span class="example">We start the new project in November. (我们十一月启动新项目)</span>
-                </li>
-                <li><span class="word">December</span> 十二月 <span class="abbr">(Dec.)</span>
-                    <span class="example">Christmas is in December. (圣诞节在十二月)</span>
-                </li>
-            </ul>
-
-            <h3>2.4 四季</h3>
-            <ul>
-                <li><span class="word">spring</span> 春天
-                    <span class="example">The weather is warm in spring. (春天天气温暖)</span>
-                </li>
-                <li><span class="word">summer</span> 夏天
-                    <span class="example">We often go swimming in summer. (我们夏天经常去游泳)</span>
-                </li>
-                <li><span class="word">autumn/fall</span> 秋天
-                    <span class="example">The leaves turn yellow in autumn. (秋天树叶变黄)</span>
-                </li>
-                <li><span class="word">winter</span> 冬天
-                    <span class="example">It snows a lot in winter in the north. (北方冬天经常下雪)</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- 计量单位 -->
-        <div class="category">
-            <h2>三、计量单位 (Units of Measurement)</h2>
-            
-            <h3>3.1 基础物理单位</h3>
-            <ul>
-                <li><span class="word">meter</span> 米 <span class="abbr">(m)</span>
-                    <span class="example">The room is 5 meters long. (这个房间长5米)</span>
-                </li>
-                <li><span class="word">kilometer</span> 千米/公里 <span class="abbr">(km)</span>
-                    <span class="example">The distance is 10 kilometers. (距离是10公里)</span>
-                </li>
-                <li><span class="word">centimeter</span> 厘米 <span class="abbr">(cm)</span>
-                    <span class="example">The book is 20 centimeters wide. (这本书宽20厘米)</span>
-                </li>
-                <li><span class="word">kilogram</span> 千克/公斤 <span class="abbr">(kg)</span>
-                    <span class="example">The box weighs 2 kilograms. (这个箱子重2公斤)</span>
-                </li>
-                <li><span class="word">gram</span> 克 <span class="abbr">(g)</span>
-                    <span class="example">The sugar is 500 grams. (这袋糖500克)</span>
-                </li>
-                <li><span class="word">liter</span> 升 <span class="abbr">(L)</span>
-                    <span class="example">Please pour 1 liter of water. (请倒1升水)</span>
-                </li>
-                <li><span class="word">milliliter</span> 毫升 <span class="abbr">(mL)</span>
-                    <span class="example">The bottle has 500 milliliters of milk. (这个瓶子有500毫升牛奶)</span>
-                </li>
-                <li><span class="word">degree Celsius</span> 摄氏度 <span class="abbr">(°C)</span>
-                    <span class="example">The temperature is 25 degrees Celsius. (温度是25摄氏度)</span>
-                </li>
-            </ul>
-
-            <h3>3.2 计算机存储单位</h3>
-            <ul>
-                <li><span class="word">bit</span> 比特
-                    <span class="example">A byte consists of 8 bits. (一个字节由8个比特组成)</span>
-                </li>
-                <li><span class="word">byte</span> 字节 <span class="abbr">(B)</span>
-                    <span class="example">The text file is 1000 bytes. (这个文本文件1000字节)</span>
-                </li>
-                <li><span class="word">kilobyte</span> 千字节 <span class="abbr">(KB)</span>
-                    <span class="example">The picture is 500 KB in size. (这张图片大小是500千字节)</span>
-                </li>
-                <li><span class="word">megabyte</span> 兆字节 <span class="abbr">(MB)</span>
-                    <span class="example">The video is 100 MB. (这个视频100兆字节)</span>
-                </li>
-                <li><span class="word">gigabyte</span> 吉字节 <span class="abbr">(GB)</span>
-                    <span class="example">The hard disk has 1000 GB of storage. (这个硬盘有1000吉字节存储空间)</span>
-                </li>
-                <li><span class="word">terabyte</span> 太字节 <span class="abbr">(TB)</span>
-                    <span class="example">The server has 10 TB of data. (这个服务器有10太字节的数据)</span>
-                </li>
-                <li><span class="word">petabyte</span> 拍字节 <span class="abbr">(PB)</span>
-                    <span class="example">The data center stores 100 PB of data. (这个数据中心存储了100拍字节的数据)</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- 天气相关 -->
-        <div class="category">
-            <h2>四、天气相关 (Weather Related)</h2>
-            <ul>
-                <li><span class="word">sunny</span> 晴朗的
-                    <span class="example">It's sunny today. (今天天气晴朗)</span>
-                </li>
-                <li><span class="word">cloudy</span> 多云的
-                    <span class="example">The weather is cloudy tomorrow. (明天多云)</span>
-                </li>
-                <li><span class="word">rainy</span> 下雨的
-                    <span class="example">It will be rainy this afternoon. (今天下午会下雨)</span>
-                </li>
-                <li><span class="word">snowy</span> 下雪的
-                    <span class="example">It's snowy in the north today. (今天北方下雪)</span>
-                </li>
-                <li><span class="word">windy</span> 刮风的
-                    <span class="example">It's windy outside. (外面在刮风)</span>
-                </li>
-                <li><span class="word">foggy</span> 有雾的
-                    <span class="example">It's foggy in the morning. (早上有雾)</span>
-                </li>
-                <li><span class="word">hot</span> 热的
-                    <span class="example">It's very hot in summer. (夏天非常热)</span>
-                </li>
-                <li><span class="word">cold</span> 冷的
-                    <span class="example">It's cold in winter. (冬天很冷)</span>
-                </li>
-                <li><span class="word">warm</span> 温暖的
-                    <span class="example">The weather is warm in spring. (春天天气温暖)</span>
-                </li>
-                <li><span class="word">cool</span> 凉爽的
-                    <span class="example">It's cool in autumn. (秋天很凉爽)</span>
-                </li>
-                <li><span class="word">temperature</span> 温度
-                    <span class="example">The temperature is 20 degrees today. (今天温度20度)</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- 交通工具 -->
-        <div class="category">
-            <h2>五、交通工具 (Transportation)</h2>
-            <ul>
-                <li><span class="word">car</span> 汽车
-                    <span class="example">I go to work by car. (我开车上班)</span>
-                </li>
-                <li><span class="word">bus</span> 公交车
-                    <span class="example">He takes the bus to the office. (他坐公交去办公室)</span>
-                </li>
-                <li><span class="word">subway</span> 地铁
-                    <span class="example">The subway is fast and convenient. (地铁又快又方便)</span>
-                </li>
-                <li><span class="word">train</span> 火车
-                    <span class="example">I take the train to travel. (我坐火车旅行)</span>
-                </li>
-                <li><span class="word">plane</span> 飞机
-                    <span class="example">We go to Beijing by plane. (我们坐飞机去北京)</span>
-                </li>
-                <li><span class="word">bicycle/bike</span> 自行车
-                    <span class="example">I ride a bike to the park. (我骑自行车去公园)</span>
-                </li>
-                <li><span class="word">taxi</span> 出租车
-                    <span class="example">Take a taxi to the airport. (坐出租车去机场)</span>
-                </li>
-                <li><span class="word">ship</span> 轮船
-                    <span class="example">The ship sails to the island. (轮船驶向那个岛屿)</span>
-                </li>
-                <li><span class="word">motorcycle</span> 摩托车
-                    <span class="example">He rides a motorcycle to work. (他骑摩托车上班)</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- 办公用品 -->
-        <div class="category">
-            <h2>六、办公用品 (Office Supplies)</h2>
-            <ul>
-                <li><span class="word">computer</span> 电脑
-                    <span class="example">I use a computer to work. (我用电脑工作)</span>
-                </li>
-                <li><span class="word">laptop</span> 笔记本电脑
-                    <span class="example">I take my laptop to the meeting. (我带笔记本电脑去开会)</span>
-                </li>
-                <li><span class="word">monitor</span> 显示器
-                    <span class="example">The monitor is 27 inches. (这个显示器27英寸)</span>
-                </li>
-                <li><span class="word">keyboard</span> 键盘
-                    <span class="example">The keyboard is wireless. (这个键盘是无线的)</span>
-                </li>
-                <li><span class="word">mouse</span> 鼠标
-                    <span class="example">Please pass me the mouse. (请把鼠标递给我)</span>
-                </li>
-                <li><span class="word">printer</span> 打印机
-                    <span class="example">Print the document with the printer. (用打印机打印这份文档)</span>
-                </li>
-                <li><span class="word">paper</span> 纸张
-                    <span class="example">We need more A4 paper. (我们需要更多A4纸)</span>
-                </li>
-                <li><span class="word">pen</span> 钢笔
-                    <span class="example">Sign the document with a pen. (用钢笔签署这份文档)</span>
-                </li>
-                <li><span class="word">pencil</span> 铅笔
-                    <span class="example">Use a pencil to take notes. (用铅笔做笔记)</span>
-                </li>
-                <li><span class="word">notebook</span> 笔记本
-                    <span class="example">Write down the meeting minutes in the notebook. (在笔记本上记录会议纪要)</span>
-                </li>
-                <li><span class="word">folder</span> 文件夹
-                    <span class="example">Put the documents in the folder. (把文档放进文件夹)</span>
-                </li>
-                <li><span class="word">stapler</span> 订书机
-                    <span class="example">Staple the papers with a stapler. (用订书机把纸张订起来)</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- 会议相关 -->
-        <div class="category">
-            <h2>七、会议相关 (Meeting Related)</h2>
-            <ul>
-                <li><span class="word">meeting</span> 会议
-                    <span class="example">We have a daily meeting at 9 AM. (我们上午9点开日常会议)</span>
-                </li>
-                <li><span class="word">conference</span> 研讨会/大型会议
-                    <span class="example">Attend the annual conference next week. (下周参加年度研讨会)</span>
-                </li>
-                <li><span class="word">agenda</span> 议程
-                    <span class="example">Please send me the meeting agenda. (请把会议议程发给我)</span>
-                </li>
-                <li><span class="word">minutes</span> 会议纪要
-                    <span class="example">Write the meeting minutes after the meeting. (会议结束后写会议纪要)</span>
-                </li>
-                <li><span class="word">participant</span> 参会者
-                    <span class="example">All participants should arrive on time. (所有参会者需准时到达)</span>
-                </li>
-                <li><span class="word">host</span> 主持人/主办方
-                    <span class="example">He is the host of the meeting. (他是这次会议的主持人)</span>
-                </li>
-                <li><span class="word">speaker</span> 发言人
-                    <span class="example">The speaker will talk about the new project. (发言人将介绍新项目)</span>
-                </li>
-                <li><span class="word">deadline</span> 截止日期
-                    <span class="example">The deadline for the report is Friday. (报告的截止日期是周五)</span>
-                </li>
-                <li><span class="word">decision</span> 决议
-                    <span class="example">We make a decision in the meeting. (我们在会议上做出决议)</span>
-                </li>
-                <li><span class="word">action item</span> 行动项
-                    <span class="example">Record the action items in the minutes. (把行动项记录在纪要里)</span>
-                </li>
-                <li><span class="word">postpone</span> 推迟
-                    <span class="example">We need to postpone the meeting to next week. (我们需要把会议推迟到下周)</span>
-                </li>
-                <li><span class="word">cancel</span> 取消
-                    <span class="example">Cancel the meeting due to bad weather. (因天气不好取消会议)</span>
-                </li>
-            </ul>
-        </div>
+    <!-- 序数词 -->
+    <div class="category">
+        <h2>一、序数词 (Ordinal Numbers)</h2>
+        <ul>
+            <li><span class="word">1st</span> first 第一
+                <span class="sent">Today is the 1st day of the month. 今天是这个月的第一天。</span>
+            </li>
+            <li><span class="word">2nd</span> second 第二
+                <span class="sent">He is the 2nd person to arrive. 他是第二个到的人。</span>
+            </li>
+            <li><span class="word">3rd</span> third 第三
+                <span class="sent">March is the 3rd month of the year. 三月是一年中的第三个月。</span>
+            </li>
+            <li><span class="word">4th</span> fourth 第四
+                <span class="sent">Thursday is the 4th day of the week. 周四是一周的第四天。</span>
+            </li>
+            <li><span class="word">5th</span> fifth 第五
+                <span class="sent">May is the 5th month of the year. 五月是一年中的第五个月。</span>
+            </li>
+            <li><span class="word">10th</span> tenth 第十
+                <span class="sent">October is the 10th month of the year. 十月是一年中的第十个月。</span>
+            </li>
+            <li><span class="word">20th</span> twentieth 第二十
+                <span class="sent">This is my 20th year of working. 这是我工作的第二十个年头。</span>
+            </li>
+            <li><span class="word">21st</span> twenty-first 第二十一
+                <span class="sent">The 21st of June is the summer solstice. 6月21日是夏至。</span>
+            </li>
+            <li><span class="word">100th</span> hundredth 第一百
+                <span class="sent">This is the 100th task we completed. 这是我们完成的第一百个任务。</span>
+            </li>
+        </ul>
     </div>
+
+    <!-- 时间相关 -->
+    <div class="category">
+        <h2>二、时间相关 (Time Related)</h2>
+        <h3>2.1 基础时间单位</h3>
+        <ul>
+            <li><span class="word">second</span> 秒
+                <span class="sent">The task takes 10 seconds to finish. 这个任务需要10秒完成。</span>
+            </li>
+            <li><span class="word">minute</span> 分钟
+                <span class="sent">Please wait for 5 minutes. 请等待5分钟。</span>
+            </li>
+            <li><span class="word">hour</span> 小时
+                <span class="sent">I work 8 hours a day. 我一天工作8小时。</span>
+            </li>
+            <li><span class="word">day</span> 天
+                <span class="sent">We need 3 days to complete the project. 我们需要3天完成这个项目。</span>
+            </li>
+            <li><span class="word">week</span> 周 <span class="abbr">wk</span>
+                <span class="sent">We have a meeting once a week. 我们每周开一次会。</span>
+            </li>
+            <li><span class="word">month</span> 月 <span class="abbr">mo</span>
+                <span class="sent">The report is due next month. 这份报告下个月截止。</span>
+            </li>
+            <li><span class="word">year</span> 年 <span class="abbr">yr</span>
+                <span class="sent">The company was founded in 2020. 这家公司成立于2020年。</span>
+            </li>
+        </ul>
+
+        <h3>2.2 星期（带缩写）</h3>
+        <ul>
+            <li><span class="word">Monday</span> 周一 <span class="abbr">Mon.</span>
+                <span class="sent">The weekly meeting is on Monday. 周会在周一召开。</span>
+            </li>
+            <li><span class="word">Tuesday</span> 周二 <span class="abbr">Tue.</span>
+                <span class="sent">I have a training on Tuesday. 我周二有培训。</span>
+            </li>
+            <li><span class="word">Wednesday</span> 周三 <span class="abbr">Wed.</span>
+                <span class="sent">We finish the task on Wednesday. 我们周三完成任务。</span>
+            </li>
+            <li><span class="word">Thursday</span> 周四 <span class="abbr">Thu.</span>
+                <span class="sent">The deadline is Thursday afternoon. 截止日期是周四下午。</span>
+            </li>
+            <li><span class="word">Friday</span> 周五 <span class="abbr">Fri.</span>
+                <span class="sent">We have a team building on Friday. 我们周五有团建。</span>
+            </li>
+            <li><span class="word">Saturday</span> 周六 <span class="abbr">Sat.</span>
+                <span class="sent">I rest on Saturday. 我周六休息。</span>
+            </li>
+            <li><span class="word">Sunday</span> 周日 <span class="abbr">Sun.</span>
+                <span class="sent">The system maintenance is on Sunday. 系统维护在周日。</span>
+            </li>
+        </ul>
+
+        <h3>2.3 月份（带缩写）</h3>
+        <ul>
+            <li><span class="word">January</span> 一月 <span class="abbr">Jan.</span>
+                <span class="sent">New Year is in January. 元旦在一月。</span>
+            </li>
+            <li><span class="word">February</span> 二月 <span class="abbr">Feb.</span>
+                <span class="sent">Valentine's Day is in February. 情人节在二月。</span>
+            </li>
+            <li><span class="word">March</span> 三月 <span class="abbr">Mar.</span>
+                <span class="sent">Women's Day is on March 8th. 妇女节在3月8日。</span>
+            </li>
+            <li><span class="word">April</span> 四月 <span class="abbr">Apr.</span>
+                <span class="sent">April Fool's Day is on April 1st. 愚人节在4月1日。</span>
+            </li>
+            <li><span class="word">May</span> 五月 <span class="abbr">May</span>
+                <span class="sent">Labor Day is on May 1st. 劳动节在5月1日。</span>
+            </li>
+            <li><span class="word">June</span> 六月 <span class="abbr">Jun.</span>
+                <span class="sent">Children's Day is on June 1st. 儿童节在6月1日。</span>
+            </li>
+            <li><span class="word">July</span> 七月 <span class="abbr">Jul.</span>
+                <span class="sent">It's very hot in July. 七月非常热。</span>
+            </li>
+            <li><span class="word">August</span> 八月 <span class="abbr">Aug.</span>
+                <span class="sent">We have a holiday in August. 我们八月有假期。</span>
+            </li>
+            <li><span class="word">September</span> 九月 <span class="abbr">Sep.</span>
+                <span class="sent">Teachers' Day is on September 10th. 教师节在9月10日。</span>
+            </li>
+            <li><span class="word">October</span> 十月 <span class="abbr">Oct.</span>
+                <span class="sent">National Day is on October 1st. 国庆节在10月1日。</span>
+            </li>
+            <li><span class="word">November</span> 十一月 <span class="abbr">Nov.</span>
+                <span class="sent">We start the new project in November. 我们十一月启动新项目。</span>
+            </li>
+            <li><span class="word">December</span> 十二月 <span class="abbr">Dec.</span>
+                <span class="sent">Christmas is in December. 圣诞节在十二月。</span>
+            </li>
+        </ul>
+
+        <h3>2.4 四季</h3>
+        <ul>
+            <li><span class="word">spring</span> 春天
+                <span class="sent">The weather is warm in spring. 春天天气温暖。</span>
+            </li>
+            <li><span class="word">summer</span> 夏天
+                <span class="sent">We often go swimming in summer. 我们夏天经常去游泳。</span>
+            </li>
+            <li><span class="word">autumn / fall</span> 秋天
+                <span class="sent">The leaves turn yellow in autumn. 秋天树叶变黄。</span>
+            </li>
+            <li><span class="word">winter</span> 冬天
+                <span class="sent">It snows a lot in winter in the north. 北方冬天经常下雪。</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 计量单位 -->
+    <div class="category">
+        <h2>三、计量单位 (Units)</h2>
+        <h3>3.1 基础单位</h3>
+        <ul>
+            <li><span class="word">meter</span> 米 <span class="abbr">m</span>
+                <span class="sent">The room is 5 meters long. 这个房间长5米。</span>
+            </li>
+            <li><span class="word">kilometer</span> 千米 <span class="abbr">km</span>
+                <span class="sent">The distance is 10 kilometers. 距离是10公里。</span>
+            </li>
+            <li><span class="word">centimeter</span> 厘米 <span class="abbr">cm</span>
+                <span class="sent">The book is 20 centimeters wide. 这本书宽20厘米。</span>
+            </li>
+            <li><span class="word">kilogram</span> 千克 <span class="abbr">kg</span>
+                <span class="sent">The box weighs 2 kilograms. 这个箱子重2公斤。</span>
+            </li>
+            <li><span class="word">gram</span> 克 <span class="abbr">g</span>
+                <span class="sent">The sugar is 500 grams. 这袋糖500克。</span>
+            </li>
+            <li><span class="word">liter</span> 升 <span class="abbr">L</span>
+                <span class="sent">Please pour 1 liter of water. 请倒1升水。</span>
+            </li>
+            <li><span class="word">milliliter</span> 毫升 <span class="abbr">mL</span>
+                <span class="sent">The bottle has 500 milliliters of milk. 这个瓶子有500毫升牛奶。</span>
+            </li>
+            <li><span class="word">degree Celsius</span> 摄氏度 <span class="abbr">°C</span>
+                <span class="sent">The temperature is 25 degrees Celsius. 温度是25摄氏度。</span>
+            </li>
+        </ul>
+
+        <h3>3.2 计算机存储单位</h3>
+        <ul>
+            <li><span class="word">bit</span> 比特
+                <span class="sent">A byte consists of 8 bits. 一个字节由8个比特组成。</span>
+            </li>
+            <li><span class="word">byte</span> 字节 <span class="abbr">B</span>
+                <span class="sent">The text file is 1000 bytes. 这个文本文件1000字节。</span>
+            </li>
+            <li><span class="word">kilobyte</span> 千字节 <span class="abbr">KB</span>
+                <span class="sent">The picture is 500 KB in size. 这张图片大小是500KB。</span>
+            </li>
+            <li><span class="word">megabyte</span> 兆 <span class="abbr">MB</span>
+                <span class="sent">The video is 100 MB. 这个视频100兆。</span>
+            </li>
+            <li><span class="word">gigabyte</span> 吉 <span class="abbr">GB</span>
+                <span class="sent">The hard disk has 1000 GB of storage. 硬盘有1000GB存储空间。</span>
+            </li>
+            <li><span class="word">terabyte</span> 太 <span class="abbr">TB</span>
+                <span class="sent">The server has 10 TB of data. 服务器有10TB数据。</span>
+            </li>
+            <li><span class="word">petabyte</span> 拍 <span class="abbr">PB</span>
+                <span class="sent">The data center stores 100 PB of data. 数据中心存储100PB数据。</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 钱 货币 财务 -->
+    <div class="category">
+        <h2>四、钱 & 货币 (Money & Finance)</h2>
+        <ul>
+            <li><span class="word">money</span> 钱
+                <span class="sent">I need to save money this month. 我这个月需要省钱。</span>
+            </li>
+            <li><span class="word">cash</span> 现金
+                <span class="sent">Do you want to pay by cash or card? 你想用现金还是刷卡支付？</span>
+            </li>
+            <li><span class="word">coin</span> 硬币
+                <span class="sent">I have some coins in my pocket. 我口袋里有一些硬币。</span>
+            </li>
+            <li><span class="word">bill</span> 纸币 / 账单
+                <span class="sent">Please pay the bill before leaving. 离开前请结账。</span>
+            </li>
+            <li><span class="word">price</span> 价格
+                <span class="sent">What is the price of this computer? 这台电脑多少钱？</span>
+            </li>
+            <li><span class="word">cost</span> 花费，成本
+                <span class="sent">The total cost is 1000 yuan. 总花费是1000元。</span>
+            </li>
+            <li><span class="word">pay</span> 支付
+                <span class="sent">I will pay for the dinner. 晚饭我来付钱。</span>
+            </li>
+            <li><span class="word">spend</span> 花费（钱/时间）
+                <span class="sent">I don't want to spend too much money. 我不想花太多钱。</span>
+            </li>
+            <li><span class="word">save</span> 节省，存钱
+                <span class="sent">I save 2000 yuan every month. 我每个月存2000元。</span>
+            </li>
+            <li><span class="word">income</span> 收入
+                <span class="sent">His monthly income is 10000 yuan. 他月收入10000元。</span>
+            </li>
+            <li><span class="word">expense</span> 开销，费用
+                <span class="sent">We need to control our expenses. 我们需要控制开销。</span>
+            </li>
+            <li><span class="word">budget</span> 预算
+                <span class="sent">We have a small budget for this project. 这个项目预算不多。</span>
+            </li>
+            <li><span class="word">discount</span> 折扣
+                <span class="sent">Can you give me a discount? 能给我打个折吗？</span>
+            </li>
+            <li><span class="word">free</span> 免费
+                <span class="sent">This software is free to use. 这个软件免费使用。</span>
+            </li>
+            <li><span class="word">cheap</span> 便宜
+                <span class="sent">The phone is very cheap. 这部手机很便宜。</span>
+            </li>
+            <li><span class="word">expensive</span> 昂贵
+                <span class="sent">The laptop is too expensive. 这台笔记本太贵了。</span>
+            </li>
+        </ul>
+
+        <h3>4.1 货币名称</h3>
+        <ul>
+            <li><span class="word">yuan / RMB</span> 元 / 人民币
+                <span class="sent">This pen is 10 yuan. 这支笔10元。</span>
+            </li>
+            <li><span class="word">dollar</span> 美元
+                <span class="sent">It costs 50 dollars. 这个50美元。</span>
+            </li>
+            <li><span class="word">euro</span> 欧元
+                <span class="sent">He pays in euros. 他用欧元支付。</span>
+            </li>
+            <li><span class="word">pound</span> 英镑
+                <span class="sent">The price is 20 pounds. 价格是20英镑。</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 天气 -->
+    <div class="category">
+        <h2>五、天气相关 (Weather)</h2>
+        <ul>
+            <li><span class="word">sunny</span> 晴朗
+                <span class="sent">It's sunny today. 今天天气晴朗。</span>
+            </li>
+            <li><span class="word">cloudy</span> 多云
+                <span class="sent">The weather is cloudy tomorrow. 明天多云。</span>
+            </li>
+            <li><span class="word">rainy</span> 下雨
+                <span class="sent">It will be rainy this afternoon. 今天下午会下雨。</span>
+            </li>
+            <li><span class="word">snowy</span> 下雪
+                <span class="sent">It's snowy in the north today. 今天北方下雪。</span>
+            </li>
+            <li><span class="word">windy</span> 刮风
+                <span class="sent">It's windy outside. 外面在刮风。</span>
+            </li>
+            <li><span class="word">foggy</span> 有雾
+                <span class="sent">It's foggy in the morning. 早上有雾。</span>
+            </li>
+            <li><span class="word">hot</span> 热
+                <span class="sent">It's very hot in summer. 夏天非常热。</span>
+            </li>
+            <li><span class="word">cold</span> 冷
+                <span class="sent">It's cold in winter. 冬天很冷。</span>
+            </li>
+            <li><span class="word">warm</span> 温暖
+                <span class="sent">The weather is warm in spring. 春天天气温暖。</span>
+            </li>
+            <li><span class="word">cool</span> 凉爽
+                <span class="sent">It's cool in autumn. 秋天很凉爽。</span>
+            </li>
+            <li><span class="word">temperature</span> 温度
+                <span class="sent">The temperature is 20 degrees today. 今天温度20度。</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 交通工具 -->
+    <div class="category">
+        <h2>六、交通工具 (Transportation)</h2>
+        <ul>
+            <li><span class="word">car</span> 汽车
+                <span class="sent">I go to work by car. 我开车上班。</span>
+            </li>
+            <li><span class="word">bus</span> 公交车
+                <span class="sent">He takes the bus to the office. 他坐公交去办公室。</span>
+            </li>
+            <li><span class="word">subway</span> 地铁
+                <span class="sent">The subway is fast and convenient. 地铁又快又方便。</span>
+            </li>
+            <li><span class="word">train</span> 火车
+                <span class="sent">I take the train to travel. 我坐火车旅行。</span>
+            </li>
+            <li><span class="word">plane</span> 飞机
+                <span class="sent">We go to Beijing by plane. 我们坐飞机去北京。</span>
+            </li>
+            <li><span class="word">bicycle / bike</span> 自行车
+                <span class="sent">I ride a bike to the park. 我骑自行车去公园。</span>
+            </li>
+            <li><span class="word">taxi</span> 出租车
+                <span class="sent">Take a taxi to the airport. 坐出租车去机场。</span>
+            </li>
+            <li><span class="word">ship</span> 轮船
+                <span class="sent">The ship sails to the island. 轮船驶向那个岛屿。</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 办公用品 -->
+    <div class="category">
+        <h2>七、办公用品 (Office Supplies)</h2>
+        <ul>
+            <li><span class="word">computer</span> 电脑
+                <span class="sent">I use a computer to work. 我用电脑工作。</span>
+            </li>
+            <li><span class="word">laptop</span> 笔记本电脑
+                <span class="sent">I take my laptop to the meeting. 我带笔记本电脑去开会。</span>
+            </li>
+            <li><span class="word">monitor</span> 显示器
+                <span class="sent">The monitor is 27 inches. 这个显示器27英寸。</span>
+            </li>
+            <li><span class="word">keyboard</span> 键盘
+                <span class="sent">The keyboard is wireless. 这个键盘是无线的。</span>
+            </li>
+            <li><span class="word">mouse</span> 鼠标
+                <span class="sent">Please pass me the mouse. 请把鼠标递给我。</span>
+            </li>
+            <li><span class="word">printer</span> 打印机
+                <span class="sent">Print the document with the printer. 用打印机打印这份文档。</span>
+            </li>
+            <li><span class="word">paper</span> 纸张
+                <span class="sent">We need more A4 paper. 我们需要更多A4纸。</span>
+            </li>
+            <li><span class="word">pen</span> 笔
+                <span class="sent">Sign the document with a pen. 用笔签署这份文档。</span>
+            </li>
+            <li><span class="word">notebook</span> 笔记本
+                <span class="sent">Write down the meeting minutes in the notebook. 在笔记本上记录会议纪要。</span>
+            </li>
+            <li><span class="word">folder</span> 文件夹
+                <span class="sent">Put the documents in the folder. 把文档放进文件夹。</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 会议相关 -->
+    <div class="category">
+        <h2>八、会议相关 (Meeting)</h2>
+        <ul>
+            <li><span class="word">meeting</span> 会议
+                <span class="sent">We have a daily meeting at 9 AM. 我们上午9点开日常会议。</span>
+            </li>
+            <li><span class="word">conference</span> 大型会议
+                <span class="sent">Attend the annual conference next week. 下周参加年度会议。</span>
+            </li>
+            <li><span class="word">agenda</span> 议程
+                <span class="sent">Please send me the meeting agenda. 请把会议议程发给我。</span>
+            </li>
+            <li><span class="word">minutes</span> 会议纪要
+                <span class="sent">Write the meeting minutes after the meeting. 会议结束后写会议纪要。</span>
+            </li>
+            <li><span class="word">participant</span> 参会者
+                <span class="sent">All participants should arrive on time. 所有参会者需准时到达。</span>
+            </li>
+            <li><span class="word">host</span> 主持人
+                <span class="sent">He is the host of the meeting. 他是这次会议的主持人。</span>
+            </li>
+            <li><span class="word">deadline</span> 截止日期
+                <span class="sent">The deadline for the report is Friday. 报告的截止日期是周五。</span>
+            </li>
+            <li><span class="word">postpone</span> 推迟
+                <span class="sent">We need to postpone the meeting to next week. 我们需要把会议推迟到下周。</span>
+            </li>
+            <li><span class="word">cancel</span> 取消
+                <span class="sent">Cancel the meeting due to bad weather. 因天气不好取消会议。</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 职场高频短语 -->
+    <div class="category">
+        <h2>九、职场高频短语 (Work Phrases)</h2>
+        <ul>
+            <li><span class="word">work overtime</span> 加班
+                <span class="sent">I have to work overtime today. 我今天得加班。</span>
+            </li>
+            <li><span class="word">on business</span> 出差
+                <span class="sent">He is on business in Beijing. 他在北京出差。</span>
+            </li>
+            <li><span class="word">take a leave</span> 请假
+                <span class="sent">I need to take a leave tomorrow. 我明天需要请假。</span>
+            </li>
+            <li><span class="word">day off</span> 休息日
+                <span class="sent">Tomorrow is my day off. 明天我休息。</span>
+            </li>
+            <li><span class="word">finish the task</span> 完成任务
+                <span class="sent">I will finish the task on time. 我会准时完成任务。</span>
+            </li>
+            <li><span class="word">deal with</span> 处理
+                <span class="sent">I need to deal with this problem. 我需要处理这个问题。</span>
+            </li>
+            <li><span class="word">follow up</span> 跟进
+                <span class="sent">Please follow up the project. 请跟进这个项目。</span>
+            </li>
+            <li><span class="word">work out</span> 解决
+                <span class="sent">We can work it out together. 我们可以一起解决。</span>
+            </li>
+            <li><span class="word">as soon as possible</span> 尽快
+                <span class="sent">Please reply as soon as possible. 请尽快回复。</span>
+            </li>
+            <li><span class="word">right now</span> 立刻，马上
+                <span class="sent">I need it right now. 我现在马上就要。</span>
+            </li>
+            <li><span class="word">in advance</span> 提前
+                <span class="sent">Please tell me in advance. 请提前告诉我。</span>
+            </li>
+            <li><span class="word">on time</span> 准时
+                <span class="sent">Please arrive on time. 请准时到达。</span>
+            </li>
+            <li><span class="word">be late</span> 迟到
+                <span class="sent">Don't be late for the meeting. 开会别迟到。</span>
+            </li>
+            <li><span class="word">get off work</span> 下班
+                <span class="sent">What time do you get off work? 你几点下班？</span>
+            </li>
+            <li><span class="word">go to work</span> 上班
+                <span class="sent">I go to work at 8 AM. 我早上8点上班。</span>
+            </li>
+            <li><span class="word">team work</span> 团队合作
+                <span class="sent">Team work is very important. 团队合作非常重要。</span>
+            </li>
+            <li><span class="word">make progress</span> 取得进展
+                <span class="sent">The project makes great progress. 项目取得了很大进展。</span>
+            </li>
+            <li><span class="word">meet the deadline</span> 赶上截止日期
+                <span class="sent">We must meet the deadline. 我们必须赶上截止日期。</span>
+            </li>
+            <li><span class="word">keep in touch</span> 保持联系
+                <span class="sent">Let's keep in touch. 我们保持联系。</span>
+            </li>
+            <li><span class="word">have a rest</span> 休息一下
+                <span class="sent">Let's have a short rest. 我们休息一会儿。</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
 </body>
 </html>
