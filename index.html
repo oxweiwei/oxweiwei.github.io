@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Boxz</title>
-    <!-- 完全对齐 chegva.com 的样式 -->
     <style>
         body {
             max-width: 1000px;
@@ -14,24 +13,20 @@
             color: #333;
             background: #fff;
         }
-        /* 标题：无加粗，和他一致 */
         h1 {
             font-weight: normal;
             font-size: 24px;
             color: #000;
             margin-bottom: 30px;
         }
-        /* 文章容器 */
         .post {
             margin: 30px 0;
         }
-        /* 时间戳：浅灰、小号，和他一致 */
         .post-time {
             color: #666;
             font-size: 14px;
             margin-bottom: 5px;
         }
-        /* 文章标题：无下划线、黑色 */
         .post-title a {
             font-size: 18px;
             color: #000;
@@ -40,19 +35,16 @@
         .post-title a:hover {
             color: #666;
         }
-        /* 文章内容：和他的文字大小、行间距一致 */
         .post-content {
             font-size: 16px;
             margin-top: 8px;
             line-height: 1.8;
         }
-        /* 分隔线：细灰线，和他一致 */
         hr {
             border: 0;
             border-top: 1px solid #eeeeee;
             margin: 20px 0;
         }
-        /* 分页样式（可选，他的分页也是极简） */
         .pagination {
             text-align: center;
             margin-top: 40px;
@@ -67,120 +59,188 @@
             color: #999;
             margin: 0 5px;
         }
+        /* 新增统计样式 */
+        .stats-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #eeeeee;
+            border-radius: 4px;
+        }
+        .stats-title {
+            font-size: 18px;
+            color: #000;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        .total-views {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .hot-docs-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hot-docs-item {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eeeeee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hot-docs-item:last-child {
+            border-bottom: none;
+        }
+        .hot-docs-link {
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .hot-docs-link:hover {
+            color: #666;
+        }
+        .hot-docs-views {
+            color: #999;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
-    <!-- 博客标题，和他的顶部标题风格一致 -->
     <h1>Boxz</h1>
 
-        <!-- Windows_Shell -->
+    <!-- 新增：访问统计区块 -->
+    <div class="stats-section">
+        <h2 class="stats-title">博客统计</h2>
+        <div class="total-views" id="total-views">总访问量：0</div>
+        <div>
+            <h3 class="stats-title" style="font-size: 16px; margin-bottom: 10px;">热门文档</h3>
+            <ul class="hot-docs-list" id="hot-docs-list">
+                <!-- 动态渲染热门文档 -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- 原有文章列表 -->
     <div class="post">
         <div class="post-title"><a href="/BigData/Windows_Shell.html">Windows常用命令</a></div>
-        <div class="post-content">
-            Windows常用命令及常见问题。
-        </div>
+        <div class="post-content">Windows常用命令及常见问题。</div>
         <div class="post-time">2026/03/17 10:42</div>
         <hr>
-
-
-
-    
-        <!-- 常用快捷键 -->
+    </div>
     <div class="post">
         <div class="post-title"><a href="/BigData/xshell.html">Xshell快捷键</a></div>
-        <div class="post-content">
-            Xshell的常用快捷键。
-        </div>
+        <div class="post-content">Xshell的常用快捷键。</div>
         <div class="post-time">2026/03/11 10:25</div>
         <hr>
-
-        <!-- 常用单词 -->
+    </div>
     <div class="post">
         <div class="post-title"><a href="/English/github-english.html">GitHub常用单词</a></div>
-        <div class="post-content">
-            GitHub常用英语单词使用举例。
-        </div>
+        <div class="post-content">GitHub常用英语单词使用举例。</div>
         <div class="post-time">2026/03/06 17:29</div>
         <hr>
-        
-    <!-- 常用单词 -->
+    </div>
     <div class="post">
         <div class="post-title"><a href="/English/english_learning.html">常用单词</a></div>
-        <div class="post-content">
-            常用的日常英语单词。
-        </div>
+        <div class="post-content">常用的日常英语单词。</div>
         <div class="post-time">2026/03/06 09:23</div>
-
         <hr>
     </div>
-    
-    
-    
-    <!-- 说说 -->
     <div class="post">
         <div class="post-title"><a href="/files/words.html">说说</a></div>
-        <div class="post-content">
-            经典语录。
-        </div>
+        <div class="post-content">经典语录。</div>
         <div class="post-time">2026/03/04 15:55</div>
-
         <hr>
     </div>
-
-    <!-- 古诗文赏析 -->
     <div class="post">
         <div class="post-title"><a href="/files/poems.html">古诗文赏析</a></div>
-        <div class="post-content">
-            诗文收集。
-        </div>
+        <div class="post-content">诗文收集。</div>
         <div class="post-time">2026/05/07 10:50</div>
-
         <hr>
     </div>
-
-    <!-- 第二篇文章（SQL50题） -->
     <div class="post">
         <div class="post-title"><a href="/BigData/MySQL/sql50题.html">SQL50题</a></div>
-        <div class="post-content">
-            大数据学习，SQL50题。
-        </div>
+        <div class="post-content">大数据学习，SQL50题。</div>
         <div class="post-time">2026/02/28 21:00</div>
-
-        
         <hr>
     </div>
-
-
-    <!-- BigDataEnglish.html -->
     <div class="post">
         <div class="post-title"><a href="/English/BigDataEnglish.html">大数据英语学习</a></div>
-        <div class="post-content">
-            BigData学习英语基础。
-        </div>
+        <div class="post-content">BigData学习英语基础。</div>
         <div class="post-time">2026/03/04 16:54</div>
-
         <hr>
     </div>
-
-    
-
-    <!-- llm_english_plan -->
     <div class="post">
         <div class="post-title"><a href="/English/llm_english_plan.html">大模型英语学习</a></div>
-        <div class="post-content">
-            AI学习英语基础。
-        </div>
+        <div class="post-content">AI学习英语基础。</div>
         <div class="post-time">2026/03/04 16:29</div>
-
         <hr>
     </div>
-    
-    
-    <!-- 分页（可选，他的页面有分页） -->
+
     <div class="pagination">
         <span>上一页</span>
         <span>第 1 页 / 共 1 页</span>
         <span>下一页</span>
     </div>
+
+    <script>
+        // 1. 统计首页总访问量
+        function updateTotalViews() {
+            let total = localStorage.getItem('blog_total_views') || 0;
+            total = parseInt(total) + 1;
+            localStorage.setItem('blog_total_views', total);
+            document.getElementById('total-views').textContent = `总访问量：${total}`;
+        }
+
+        // 2. 定义所有文档的映射（路径 -> 标题）
+        const docsMap = {
+            '/BigData/Windows_Shell.html': 'Windows常用命令',
+            '/BigData/xshell.html': 'Xshell快捷键',
+            '/English/github-english.html': 'GitHub常用单词',
+            '/English/english_learning.html': '常用单词',
+            '/files/words.html': '说说',
+            '/files/poems.html': '古诗文赏析',
+            '/BigData/MySQL/sql50题.html': 'SQL50题',
+            '/English/BigDataEnglish.html': '大数据英语学习',
+            '/English/llm_english_plan.html': '大模型英语学习'
+        };
+
+        // 3. 获取并排序热门文档（按访问量降序）
+        function getHotDocs() {
+            const hotDocs = [];
+            for (const [path, title] of Object.entries(docsMap)) {
+                const views = localStorage.getItem(`doc_views_${path}`) || 0;
+                hotDocs.push({ path, title, views: parseInt(views) });
+            }
+            // 按访问量降序排序，取前5
+            return hotDocs.sort((a, b) => b.views - a.views).slice(0, 5);
+        }
+
+        // 4. 渲染热门文档列表
+        function renderHotDocs() {
+            const hotDocsList = document.getElementById('hot-docs-list');
+            const hotDocs = getHotDocs();
+            
+            if (hotDocs.length === 0) {
+                hotDocsList.innerHTML = '<li class="hot-docs-item"><span>暂无访问数据</span></li>';
+                return;
+            }
+
+            hotDocsList.innerHTML = '';
+            hotDocs.forEach(doc => {
+                const li = document.createElement('li');
+                li.className = 'hot-docs-item';
+                li.innerHTML = `
+                    <a href="${doc.path}" class="hot-docs-link">${doc.title}</a>
+                    <span class="hot-docs-views">${doc.views} 次浏览</span>
+                `;
+                hotDocsList.appendChild(li);
+            });
+        }
+
+        // 初始化
+        updateTotalViews();
+        renderHotDocs();
+    </script>
 </body>
 </html>
