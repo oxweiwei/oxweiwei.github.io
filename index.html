@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Boxz</title>
+    <!-- 完全对齐 chegva.com 的样式，新增flex布局 -->
     <style>
         body {
             max-width: 1000px;
@@ -12,21 +13,41 @@
             line-height: 1.8;
             color: #333;
             background: #fff;
+            /* 新增：flex布局实现左右分栏 */
+            display: flex;
+            gap: 30px; /* 左右栏间距 */
         }
+        /* 新增：左侧统计栏 */
+        .stats-sidebar {
+            width: 220px; /* 固定宽度 */
+            flex-shrink: 0; /* 不收缩 */
+            padding: 20px;
+            border: 1px solid #eeeeee;
+            border-radius: 4px;
+            margin-top: 24px; /* 和右侧标题对齐 */
+        }
+        /* 新增：右侧文章主内容 */
+        .main-content {
+            flex: 1; /* 自适应剩余宽度 */
+        }
+        /* 标题：无加粗，和他一致 */
         h1 {
             font-weight: normal;
             font-size: 24px;
             color: #000;
             margin-bottom: 30px;
         }
+        /* 文章容器 */
         .post {
             margin: 30px 0;
         }
+        /* 时间戳：浅灰、小号，和他一致 */
         .post-time {
             color: #666;
             font-size: 14px;
             margin-bottom: 5px;
         }
+        /* 文章标题：无下划线、黑色 */
         .post-title a {
             font-size: 18px;
             color: #000;
@@ -35,16 +56,19 @@
         .post-title a:hover {
             color: #666;
         }
+        /* 文章内容：和他的文字大小、行间距一致 */
         .post-content {
             font-size: 16px;
             margin-top: 8px;
             line-height: 1.8;
         }
+        /* 分隔线：细灰线，和他一致 */
         hr {
             border: 0;
             border-top: 1px solid #eeeeee;
             margin: 20px 0;
         }
+        /* 分页样式（可选，他的分页也是极简） */
         .pagination {
             text-align: center;
             margin-top: 40px;
@@ -59,23 +83,20 @@
             color: #999;
             margin: 0 5px;
         }
-        /* 新增统计样式 */
-        .stats-section {
-            margin: 30px 0;
-            padding: 20px;
-            border: 1px solid #eeeeee;
-            border-radius: 4px;
-        }
+        /* 统计模块样式（适配左侧栏） */
         .stats-title {
             font-size: 18px;
             color: #000;
             margin-bottom: 15px;
             font-weight: normal;
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 8px;
         }
         .total-views {
             font-size: 16px;
             margin-bottom: 20px;
             color: #666;
+            padding: 8px 0;
         }
         .hot-docs-list {
             list-style: none;
@@ -95,22 +116,20 @@
         .hot-docs-link {
             color: #000;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px; /* 微调字号适配窄栏 */
         }
         .hot-docs-link:hover {
             color: #666;
         }
         .hot-docs-views {
             color: #999;
-            font-size: 14px;
+            font-size: 13px; /* 微调字号适配窄栏 */
         }
     </style>
 </head>
 <body>
-    <h1>Boxz</h1>
-
-    <!-- 新增：访问统计区块 -->
-    <div class="stats-section">
+    <!-- 左侧：统计侧边栏 -->
+    <div class="stats-sidebar">
         <h2 class="stats-title">博客统计</h2>
         <div class="total-views" id="total-views">总访问量：0</div>
         <div>
@@ -121,66 +140,106 @@
         </div>
     </div>
 
-    <!-- 原有文章列表 -->
-    <div class="post">
-        <div class="post-title"><a href="/BigData/Windows_Shell.html">Windows常用命令</a></div>
-        <div class="post-content">Windows常用命令及常见问题。</div>
-        <div class="post-time">2026/03/17 10:42</div>
-        <hr>
-    </div>
-    <div class="post">
-        <div class="post-title"><a href="/BigData/xshell.html">Xshell快捷键</a></div>
-        <div class="post-content">Xshell的常用快捷键。</div>
-        <div class="post-time">2026/03/11 10:25</div>
-        <hr>
-    </div>
-    <div class="post">
-        <div class="post-title"><a href="/English/github-english.html">GitHub常用单词</a></div>
-        <div class="post-content">GitHub常用英语单词使用举例。</div>
-        <div class="post-time">2026/03/06 17:29</div>
-        <hr>
-    </div>
-    <div class="post">
-        <div class="post-title"><a href="/English/english_learning.html">常用单词</a></div>
-        <div class="post-content">常用的日常英语单词。</div>
-        <div class="post-time">2026/03/06 09:23</div>
-        <hr>
-    </div>
-    <div class="post">
-        <div class="post-title"><a href="/files/words.html">说说</a></div>
-        <div class="post-content">经典语录。</div>
-        <div class="post-time">2026/03/04 15:55</div>
-        <hr>
-    </div>
-    <div class="post">
-        <div class="post-title"><a href="/files/poems.html">古诗文赏析</a></div>
-        <div class="post-content">诗文收集。</div>
-        <div class="post-time">2026/05/07 10:50</div>
-        <hr>
-    </div>
-    <div class="post">
-        <div class="post-title"><a href="/BigData/MySQL/sql50题.html">SQL50题</a></div>
-        <div class="post-content">大数据学习，SQL50题。</div>
-        <div class="post-time">2026/02/28 21:00</div>
-        <hr>
-    </div>
-    <div class="post">
-        <div class="post-title"><a href="/English/BigDataEnglish.html">大数据英语学习</a></div>
-        <div class="post-content">BigData学习英语基础。</div>
-        <div class="post-time">2026/03/04 16:54</div>
-        <hr>
-    </div>
-    <div class="post">
-        <div class="post-title"><a href="/English/llm_english_plan.html">大模型英语学习</a></div>
-        <div class="post-content">AI学习英语基础。</div>
-        <div class="post-time">2026/03/04 16:29</div>
-        <hr>
-    </div>
+    <!-- 右侧：原有文章内容 -->
+    <div class="main-content">
+        <h1>Boxz</h1>
 
-    <div class="pagination">
-        <span>上一页</span>
-        <span>第 1 页 / 共 1 页</span>
-        <span>下一页</span>
+        <!-- Windows_Shell -->
+        <div class="post">
+            <div class="post-title"><a href="/BigData/Windows_Shell.html">Windows常用命令</a></div>
+            <div class="post-content">
+                Windows常用命令及常见问题。
+            </div>
+            <div class="post-time">2026/03/17 10:42</div>
+            <hr>
+        </div>
+
+        <!-- 常用快捷键 -->
+        <div class="post">
+            <div class="post-title"><a href="/BigData/xshell.html">Xshell快捷键</a></div>
+            <div class="post-content">
+                Xshell的常用快捷键。
+            </div>
+            <div class="post-time">2026/03/11 10:25</div>
+            <hr>
+        </div>
+
+        <!-- GitHub常用单词 -->
+        <div class="post">
+            <div class="post-title"><a href="/English/github-english.html">GitHub常用单词</a></div>
+            <div class="post-content">
+                GitHub常用英语单词使用举例。
+            </div>
+            <div class="post-time">2026/03/06 17:29</div>
+            <hr>
+        </div>
+        
+        <!-- 常用单词 -->
+        <div class="post">
+            <div class="post-title"><a href="/English/english_learning.html">常用单词</a></div>
+            <div class="post-content">
+                常用的日常英语单词。
+            </div>
+            <div class="post-time">2026/03/06 09:23</div>
+            <hr>
+        </div>
+        
+        <!-- 说说 -->
+        <div class="post">
+            <div class="post-title"><a href="/files/words.html">说说</a></div>
+            <div class="post-content">
+                经典语录。
+            </div>
+            <div class="post-time">2026/03/04 15:55</div>
+            <hr>
+        </div>
+
+        <!-- 古诗文赏析 -->
+        <div class="post">
+            <div class="post-title"><a href="/files/poems.html">古诗文赏析</a></div>
+            <div class="post-content">
+                诗文收集。
+            </div>
+            <div class="post-time">2026/05/07 10:50</div>
+            <hr>
+        </div>
+
+        <!-- SQL50题 -->
+        <div class="post">
+            <div class="post-title"><a href="/BigData/MySQL/sql50题.html">SQL50题</a></div>
+            <div class="post-content">
+                大数据学习，SQL50题。
+            </div>
+            <div class="post-time">2026/02/28 21:00</div>
+            <hr>
+        </div>
+
+        <!-- 大数据英语学习 -->
+        <div class="post">
+            <div class="post-title"><a href="/English/BigDataEnglish.html">大数据英语学习</a></div>
+            <div class="post-content">
+                BigData学习英语基础。
+            </div>
+            <div class="post-time">2026/03/04 16:54</div>
+            <hr>
+        </div>
+
+        <!-- 大模型英语学习 -->
+        <div class="post">
+            <div class="post-title"><a href="/English/llm_english_plan.html">大模型英语学习</a></div>
+            <div class="post-content">
+                AI学习英语基础。
+            </div>
+            <div class="post-time">2026/03/04 16:29</div>
+            <hr>
+        </div>
+        
+        <!-- 分页 -->
+        <div class="pagination">
+            <span>上一页</span>
+            <span>第 1 页 / 共 1 页</span>
+            <span>下一页</span>
+        </div>
     </div>
 
     <script>
@@ -221,8 +280,8 @@
             const hotDocsList = document.getElementById('hot-docs-list');
             const hotDocs = getHotDocs();
             
-            if (hotDocs.length === 0) {
-                hotDocsList.innerHTML = '<li class="hot-docs-item"><span>暂无访问数据</span></li>';
+            if (hotDocs.length === 0 || hotDocs.every(doc => doc.views === 0)) {
+                hotDocsList.innerHTML = '<li class="hot-docs-item"><span style="color:#999;">暂无访问数据</span></li>';
                 return;
             }
 
@@ -230,9 +289,10 @@
             hotDocs.forEach(doc => {
                 const li = document.createElement('li');
                 li.className = 'hot-docs-item';
+                // 适配窄栏：标题超长时省略
                 li.innerHTML = `
-                    <a href="${doc.path}" class="hot-docs-link">${doc.title}</a>
-                    <span class="hot-docs-views">${doc.views} 次浏览</span>
+                    <a href="${doc.path}" class="hot-docs-link" style="max-width: 140px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${doc.title}</a>
+                    <span class="hot-docs-views">${doc.views} 次</span>
                 `;
                 hotDocsList.appendChild(li);
             });
