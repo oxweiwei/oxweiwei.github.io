@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windows & Linux 常用命令 + 实用技巧汇总</title>
-    <!-- 引入语法高亮样式（可选，提升代码可读性） -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
     <style>
         /* 基础样式 */
@@ -28,7 +27,7 @@
             padding-bottom: 10px;
             margin: 20px 0;
         }
-        /* 新增：文章信息样式 */
+        /* 文章信息样式 */
         .article-meta {
             color: #666;
             font-size: 0.9em;
@@ -99,9 +98,9 @@
 </head>
 <body>
     <h1>Windows & Linux 常用命令 + 实用技巧汇总</h1>
-    <!-- 新增：文章元信息 -->
+    <!-- 文章元信息 -->
     <div class="article-meta">
-        2026年5月7日 by boxz · 0评论 · 105 人阅读
+        <span id="update-time"></span> by boxz · 0评论 · <span id="read-count">0</span> 人阅读
     </div>
 
     <h2>一、Windows 命令行 vs Linux 命令对比</h2>
@@ -236,8 +235,43 @@
         3. 若提示“HSTS”无法访问，可清除浏览器缓存后重试。
     </div>
 
-    <!-- 语法高亮脚本（可选，若不需要高亮可删除） -->
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script>
+        // 1. 获取并格式化文档最后修改时间
+        function formatUpdateTime() {
+            // 获取文档最后修改时间（浏览器API）
+            const lastModified = new Date(document.lastModified);
+            // 格式化：YYYY年MM月DD日
+            const year = lastModified.getFullYear();
+            const month = String(lastModified.getMonth() + 1).padStart(2, '0');
+            const day = String(lastModified.getDate()).padStart(2, '0');
+            return `${year}年${month}月${day}日`;
+        }
+
+        // 2. 处理阅读数：localStorage 持久化，每次刷新+1
+        function updateReadCount() {
+            // 从localStorage读取当前阅读数，无则初始化为105（原初始值）
+            let readCount = localStorage.getItem('articleReadCount');
+            if (!readCount) {
+                readCount = 105;
+            } else {
+                // 每次刷新+1
+                readCount = parseInt(readCount) + 1;
+            }
+            // 写回localStorage
+            localStorage.setItem('articleReadCount', readCount);
+            // 渲染到页面
+            document.getElementById('read-count').textContent = readCount;
+        }
+
+        // 页面加载完成后执行
+        window.onload = function() {
+            // 渲染最后修改时间
+            document.getElementById('update-time').textContent = formatUpdateTime();
+            // 更新并渲染阅读数
+            updateReadCount();
+        };
+    </script>
 </body>
 </html>
