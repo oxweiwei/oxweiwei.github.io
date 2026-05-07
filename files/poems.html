@@ -21,10 +21,10 @@
             text-align: center;
             font-size: 32px;
             color: #8b2323;
-            margin-bottom: 10px; /* 调整间距，适配下方小字 */
+            margin-bottom: 10px;
         }
-        /* 标题附属信息：浏览量+更新时间 */
-        .title-meta {
+        /* 文档信息栏样式：时间、作者、阅读量 */
+        .doc-info {
             text-align: center;
             font-size: 14px;
             color: #666;
@@ -89,10 +89,8 @@
 </head>
 <body>
     <h1 class="main-title">古风诗词集</h1>
-    <!-- 标题附属信息：浏览量 + 动态更新时间 -->
-    <div class="title-meta">
-        浏览量：2589 &nbsp;&nbsp; 文档更新时间：<span id="updateTime"></span>
-    </div>
+    <!-- 文档信息栏：自动时间 + 作者 + 0评论 + 自动浏览量 -->
+    <div class="doc-info" id="docInfo"></div>
 
     <div class="poem-card">
         <div class="poem-title">关山月</div>
@@ -152,24 +150,37 @@
         </div>
     </div>
 
-    <!-- 动态获取当前时间的JS -->
     <script>
-        // 格式化时间为「YYYY年MM月DD日 HH:MM:SS」格式
+        // 1. 格式化当前时间为「YYYY年MM月DD日」格式
         function formatCurrentTime() {
             const now = new Date();
-            // 补零：确保单个数字的月份/日期/时分秒显示为两位
             const year = now.getFullYear();
-            const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份从0开始，需+1
+            const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份从0开始，+1补正
             const day = String(now.getDate()).padStart(2, '0');
-            const hour = String(now.getHours()).padStart(2, '0');
-            const minute = String(now.getMinutes()).padStart(2, '0');
-            const second = String(now.getSeconds()).padStart(2, '0');
-            
-            return `${year}年${month}月${day}日 ${hour}:${minute}:${second}`;
+            return `${year}年${month}月${day}日`;
         }
 
-        // 将格式化后的时间插入到页面中
-        document.getElementById('updateTime').textContent = formatCurrentTime();
+        // 2. 模拟自动浏览量（基于本地存储，刷新页面随机增加1-5）
+        function getPageViews() {
+            // 从本地存储获取历史浏览量，无则初始化为200
+            let views = localStorage.getItem('poemPageViews') || 200;
+            // 转为数字并随机增加1-5
+            views = Number(views) + Math.floor(Math.random() * 5) + 1;
+            // 存回本地存储，持久化
+            localStorage.setItem('poemPageViews', views);
+            return views;
+        }
+
+        // 3. 组装信息并渲染到页面
+        function renderDocInfo() {
+            const timeText = formatCurrentTime();
+            const views = getPageViews();
+            const infoText = `${timeText} by boxz · 0评论 · ${views} 人阅读`;
+            document.getElementById('docInfo').textContent = infoText;
+        }
+
+        // 页面加载时执行
+        window.onload = renderDocInfo;
     </script>
 </body>
 </html>
